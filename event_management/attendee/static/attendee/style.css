@@ -44,4 +44,19 @@ html{
 .header .logo img{
     height: 6rem;
 }
+header .navbar a{
+    color: #fff;
+    margin-left: 2rem;
+    font-size: 1.7rem;
+}
+header .navbar a:hover{
+    color: var(--main);
+}
+#MenuBtn{
+    color: #fff;
+    font-size: 4rem;
+    display: none;
+}
 /*Navbr/Header End */
+
+
