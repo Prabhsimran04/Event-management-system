@@ -15,8 +15,8 @@
 
    <!-- Header/Navbar Start-->
     <div class="header">
-        <a href="https://th.bing.com/th?q=Party+Event+Planner+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" class="logo">
-            <img src="https://th.bing.com/th?q=Party+Event+Planner+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="">
+        <a href="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" class="logo">
+            <img src="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" alt="">
             </a>
 
         <nav class="navbar">
@@ -27,19 +27,32 @@
             <a href="#Review">Review</a>
             <a href="#Contact">Contact</a>
         </nav>
-        <div class="fas fa.bars" id="MenuBtn"></div>
+        <div class="fas fa-bars" id="MenuBtn"></div>
     </div>
-    <!-- Header/Navbar End--> 
+    <!-- Header/Navbar End-->
+     
+    <!-- Home Section Start-->
+     <section id="Home" class="home">
+
+        <div class="content">
+            <h3>When Nothing Goes Right, Go Left.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, vel quaerat delectus voluptatibus exercitationem expedita ad id inventore, similique magnam deserunt animi fuga quo doloremque error cum voluptates! Facere, voluptate.</p>
+            <a href="a" class="btn">View More</a>
+        </div>
+
+     </section>
+    <!--Home Section End-->
 
 
     <!-- Script for js -->
      <script>
         let MenuBtn = document.querySelector("#MenuBtn")
-        let Navbar = document.querySelector("header .navbar")
+        let Navbar = document.querySelector(".header .navbar")
 
-        MenuBtn.onclick = () => (
-            MenuBtn.classList.toggle("fa.times");
-     );
+        MenuBtn.onclick = () => {
+            MenuBtn.classList.toggle("fa-times");
+            Navbar.classList.toggle("active");
+        }
      </script>    
 </body>
 </html>  

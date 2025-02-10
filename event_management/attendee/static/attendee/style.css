@@ -22,6 +22,21 @@ html{
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
+selection{
+    padding: 2rem 7%;
+}
+.btn{
+    display: inline-block;
+    background: var(--main);
+    cursor: pointer;
+    color: #fff;
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    letter-spacing: 0.2rem;
+}
 /* Global Variables */
 :root{
     --main:#f01027;
@@ -39,10 +54,10 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 9%;
+    padding: 0.5rem 9%;
 }
 .header .logo img{
-    height: 6rem;
+    height: 7rem;
 }
 .header .navbar a{
     color: #fff;
@@ -53,12 +68,39 @@ html{
     color: var(--main);
 }
 #MenuBtn{
-    color: #fff;
-    font-size: 4rem;
+    color: hsl(0, 0%, 100%);
+    font-size: 3rem;
     display: none;
 }
 /*Navbr/Header End */
 
+/* Home Section Start */
+.home {
+    /* background: linear-gradient(rgba(139, 127, 127, 0.966), rgba(139, 136, 136, 0.952)); */
+    background: no-repeat url("https://wallpapercave.com/wp/wp7488275.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+}
+.home .content{
+    max-width: 60rem;
+    color: #fff;
+}
+.home .content h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.home .content p{
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: #ccc;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+/* Home Section End */
 
 /* Media Query */
 @media(max-width:991px){
@@ -71,7 +113,7 @@ html{
     #MenuBtn {
         display: initial;
     }
-    .fa.times{
+    .fa-times{
         transform: rotate(180deg);
     }
     .header .navbar{
@@ -93,5 +135,23 @@ html{
         margin: 1.3rem;
         font-size: 2rem;
         padding: 1.3rem;
+    }
+    .home .content h3{
+        font-size: 4rem;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
     }
 }
