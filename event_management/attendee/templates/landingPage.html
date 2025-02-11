@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--link font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- link style css -->
     <link rel="stylesheet" href="{% static "attendee\style.css" %}">
     <title>Event management</title>
 </head>
+
 <body>
 
-   <!-- Header/Navbar Start-->
+    <!-- Header/Navbar Start-->
     <div class="header">
         <a href="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" class="logo">
             <img src="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" alt="">
-            </a>
+        </a>
 
         <nav class="navbar">
             <a href="#Home">Home</a>
@@ -30,29 +35,234 @@
         <div class="fas fa-bars" id="MenuBtn"></div>
     </div>
     <!-- Header/Navbar End-->
-     
+
     <!-- Home Section Start-->
-     <section id="Home" class="home">
+    <section id="Home" class="home">
 
         <div class="content">
             <h3>When Nothing Goes Right, Go Left.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, vel quaerat delectus voluptatibus exercitationem expedita ad id inventore, similique magnam deserunt animi fuga quo doloremque error cum voluptates! Facere, voluptate.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, vel quaerat delectus voluptatibus
+                exercitationem expedita ad id inventore, similique magnam deserunt animi fuga quo doloremque error cum
+                voluptates! Facere, voluptate.</p>
             <a href="a" class="btn">View More</a>
         </div>
 
-     </section>
+    </section>
     <!--Home Section End-->
 
+    <!-- About Us Section Start -->
+    <section id="About" class="about">
+        <h1 class="heading"><span>ABOUT</span>US</h1>
+
+        <div class="row">
+
+            <div class="img">
+                <img src="https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>We Will Give A Very Special Celebration For You</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati aliquam, culpa accusantium enim
+                    suscipit alias. Libero, sequi.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                    voluptatem natus! Eius, eos!</p>
+                <a href="a" class="btn">Contact us</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
+
+    <!-- Services Section Start -->
+    <section id="services" class="services">
+
+        <h3 class="heading"><span>OUR</span>SERVICES</h3>
+
+        <div class="boxContainer">
+
+            <div class="box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Venue Selection</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos reprehenderit, consectetur beatae
+                    facere itaque maiores temporibus cumque in sit accusantium doloribus, ea, eius veniam fugiat magnam.
+                    Unde cum obcaecati velit.</p>
+            </div>
+
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <h3>Invitation Card</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos reprehenderit, consectetur beatae
+                    facere itaque maiores temporibus cumque in sit accusantium doloribus, ea, eius veniam fugiat magnam.
+                    Unde cum obcaecati velit.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-music"></i>
+                <h3>Entertainment</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos reprehenderit, consectetur beatae
+                    facere itaque maiores temporibus cumque in sit accusantium doloribus, ea, eius veniam fugiat magnam.
+                    Unde cum obcaecati velit.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Food and Drinks</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos reprehenderit, consectetur beatae
+                    facere itaque maiores temporibus cumque in sit accusantium doloribus, ea, eius veniam fugiat magnam.
+                    Unde cum obcaecati velit.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-photo-video"></i>
+                <h3>Photos and Videos</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos reprehenderit, consectetur beatae
+                    facere itaque maiores temporibus cumque in sit accusantium doloribus, ea, eius veniam fugiat magnam.
+                    Unde cum obcaecati velit.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-birthday-cake"></i>
+                <h3>Custom Food</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos reprehenderit, consectetur beatae
+                    facere itaque maiores temporibus cumque in sit accusantium doloribus, ea, eius veniam fugiat magnam.
+                    Unde cum obcaecati velit.</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Gallery Section Start -->
+    <section id="Gallery" class="gallery">
+        <h1 class="heading"><span>OUR</span>GALLERY</h1>
+        <div class="boxContainer">
+
+            <div class="box">
+                <img src="https://www.totbarcelona.cat/app/uploads/sites/11/2022/08/favsu7ywiamypvk.jpeg" alt="">
+            <h3>Photos And Events</h3>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://ts3.mm.bing.net/th?id=OIP.lNOW4jXnNXVTdJwBBYVT2AHaE8&pid=15.1" alt="">
+            <h3>Photos And Events</h3>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://mirageparties.co.uk/wp-content/uploads/2019/05/Essex-Luxury-Marquee-Party.jpg" alt="">
+            <h3>Photos And Events</h3>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="https://thumbs.dreamstime.com/z/holy-chariot-rolling-down-yonge-street-annual-festival-india-o-rath-yeatra-mayapur-colorful-celebration-127434943.jpg?w=992"
+            alt="">
+            <h3>Photos And Events</h3>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="https://th.bing.com/th/id/OIP.gufwqRjp93_b9crF1hHOIwHaFi?rs=1&pid=ImgDetMain" alt="">
+            <h3>Photos And Events</h3>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://th.bing.com/th/id/R.6eb8d6065e98d4bbe04aa772948cb305?rik=kPfH1h1wju5BMA&riu=http%3a%2f%2fwww.thatballoons.com%2fwp-content%2fuploads%2f2013%2f10%2fFlowers-and-Rainbow-Balloon-Arch.jpg&ehk=Tv%2fLvjAV7y9BQDhGXQOLxlPFro8mjejh5LaIjYfBwM8%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <h3>Photos And Events</h3>
+            <div class="icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share"></i>
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>    
+    </div>
+    </section>
+    <!-- Gallery Section End-->
+
+    <!-- Review Section Start -->
+     <section id="Review" class="review">
+        <h1 class="heading">Client's<span>Review</span></h1>
+
+        <div class="ReviewSlider swiper=container">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-Quote-right"></i>
+                    <div class="user">
+                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-33498,resizemode-75,msid-103135746/news/company/corporate-trends/ril-agm-2023-mukesh-ambani-to-remain-chairman-md-of-the-company-for-next-five-years.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>Mukesh Ambani</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!-- Review Section End -->
+
+     <!-- Swiper Js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Script for js -->
-     <script>
+    <script>
         let MenuBtn = document.querySelector("#MenuBtn")
         let Navbar = document.querySelector(".header .navbar")
 
+        window.onscroll = () => {
+            Navbar.classList.remove("active");
+            MenuBtn.classList.remove("fa-times");
+        }
         MenuBtn.onclick = () => {
             MenuBtn.classList.toggle("fa-times");
             Navbar.classList.toggle("active");
         }
-     </script>    
+
+        //Swiper.js
+        var swiper = new Swiper(".ReviewSlider",{
+            slidePerView: 1,
+            grabCursor: true,
+            loop: true,
+            spaceBetween: 10,
+            breakpoints: {
+                0: {
+                    slidesperView: 1,
+                },
+                700: {
+                    slidesPerView: 2,
+                },
+                1050: {
+                    slidesPerView: 3;
+                },
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
-</html>  
+
+</html>
