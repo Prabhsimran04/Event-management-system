@@ -285,6 +285,19 @@ html::-webkit-scrollbar-track{
     object-fit: cover;
     border-radius: 50%;
 }
+.review .box .user h3{
+    font-size: 2rem;
+}
+.review .box .user span{
+    font-size: 1.5rem;
+    color: #eee;
+}
+.review .box p{
+    line-height: 2;
+    padding: 0.5 0;
+    font-size: 1.6rem;
+    color: #eee;
+}
 /* Review Section End */
 
 /* Media Query */
