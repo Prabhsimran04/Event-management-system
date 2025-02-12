@@ -258,6 +258,27 @@ html::-webkit-scrollbar-track{
 .review{
     margin-bottom: 200px;
 }
+.review .box{
+    border: var(--border);
+    border-radius: 0.5rem;
+    background: #000;
+    padding: 2rem;
+    position: relative;
+    color: #fff;
+}
+.review .fa-Quote-right{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--main);
+    font-size: 5rem;
+}
+.review .box .user{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
 .review img{
     height: 7rem;
     width: 7rem;
