@@ -323,15 +323,166 @@ html::-webkit-scrollbar-track{
 }
 .contact form{
     flex: 1 1 45rem;
-    border: var(--border);
+    border: 4px solid red;
     box-shadow: var(--border);
     padding: 2rem;
     text-align: center;
     border-radius: 0.5rem;
-    color: black;
-
+}
+.contact form h3{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+.contact form .box{
+    width: 100%;
+    margin: 0.7rem 0;
+    text-transform: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid red;
 }
 /* Contact Form End */
+
+/* Footer */
+footer{
+    background: #000;
+    padding-top: 50px;
+    text-align: center;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 33%;
+    color: #eee;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width: 100px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style: none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid blue;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f18920;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #fff;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+/* Footer */
+
+/* Theme Toggle */
+.themeToggle{
+    position: fixed;
+    top: 10rem;
+    right: 20rem;
+    background: #000;
+    z-index: 10000;
+    width: 20rem;
+    text-align: center;
+}
+.themeToggle.active{
+    right: 0;
+}
+.themeToggle .buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.themeToggle .buttons .theme.btn{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.toggleBtn{
+    position: absolute;
+    top: 0;
+    left: 5.9rem;
+    padding: 1.3rem 1.5rem;
+    background-color: #000;
+    cursor: pointer;
+}
+.toggleBtn i{
+    color: #fff;
+    font-size: 3rem;
+    animation: spin 1.2s linear infinite;
+}
+.themeToggle h3{
+    color: #fff;
+    padding: 1rem;
+    font-size: 2rem;
+    
+}
+@keyframes spin{
+    0%{
+        transform: rotate(360deg);
+    }
+}
 
 /* Media Query */
 @media(max-width:991px){

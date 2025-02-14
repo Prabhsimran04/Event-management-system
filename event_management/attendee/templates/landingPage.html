@@ -72,7 +72,7 @@
     <!-- About Us Section End -->
 
     <!-- Services Section Start -->
-    <section id="services" class="services">
+    <section id="Services" class="services">
 
         <h3 class="heading"><span>OUR</span>SERVICES</h3>
 
@@ -360,6 +360,63 @@
       </section>
       <!--Contact Form End -->
 
+      <!-- Footer -->
+       <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email:Infoevent@gmail.com</p>
+                <p>Phone:+91 87695 87695</p>
+                <p>Address:Ranjit Avenue B-block,Amritsar</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services </a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>$Event Management </p>
+        </div>
+
+       </footer>
+       <!-- Footer -->
+
+       <!-- Theme Toggle -->
+        <div class="themeToggle">
+
+            <div class="toggleBtn">
+                <i class="fas fa-cog"></i>
+            </div>
+
+            <h3>Choose Color</h3>
+
+            <div class="buttons">
+                <div class="theme-btn" style="background: #0011ff;"></div>
+                <div class="theme-btn" style="background: #ffb404;"></div>
+                <div class="theme-btn" style="background: #2bff00;"></div>
+                <div class="theme-btn" style="background: #fc00dbe6;"></div>
+                <div class="theme-btn" style="background: #cb5805;"></div>
+                <div class="theme-btn" style="background: #fbff00;"></div>
+
+            </div>
+
+        </div>
+
      <!-- Swiper Js -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -391,7 +448,7 @@
                     slidesPerView: 2,
                 },
                 1050: {
-                    slidesPerView: 3;
+                    slidesPerView: 3,
                 },
             },
             autoplay: {
@@ -399,6 +456,22 @@
                 disableOnInteraction: false,
             },
         });
+        
+        // Theme Toggle
+        let themeToggle = document.querySelector(".themeToggle")
+        let toggleBtn = document.querySelector(".toggleBtn")
+
+        toggleBtn.onclick = () => {
+            themeToggle.classList.toggle("active");
+         }
+
+         // Main Logic
+         document.querySelectorAll(".themeToggle .theme-Btn").forEach((btn) => {
+            btn.onclick = () => {
+                let color = btn.style.background;
+                document.querySelector(":root").style.setProperty("--main",color)
+            }
+         })
     </script>
 </body>
 
