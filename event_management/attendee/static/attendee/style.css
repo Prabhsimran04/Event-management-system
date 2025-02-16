@@ -220,7 +220,7 @@ html::-webkit-scrollbar-track{
 
 .gallery .boxContainer .box h3{
     position: absolute;
-    top: 10rem;
+    top: -10rem;
     left: 0;
     right: 0;
     background: var(--main);
@@ -234,7 +234,7 @@ html::-webkit-scrollbar-track{
 }
 .gallery .boxContainer .box .icons{
     position: absolute;
-    bottom: 0;
+    bottom: -10rem;
     left: 0;
     right: 0;
     background: var(--main);
@@ -350,7 +350,7 @@ footer{
     text-align: center;
 }
 .container{
-    width: 1140px;
+    width: 100vw;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -437,13 +437,13 @@ a:hover{
 .themeToggle{
     position: fixed;
     top: 10rem;
-    right: 20rem;
+    right: -20rem;
     background: #000;
     z-index: 10000;
     width: 20rem;
     text-align: center;
 }
-.themeToggle.active{
+.themeToggle .active{
     right: 0;
 }
 .themeToggle .buttons{
@@ -460,12 +460,13 @@ a:hover{
     cursor: pointer;
 }
 .toggleBtn{
-    position: absolute;
-    top: 0;
-    left: 5.9rem;
+    position: fixed;
+    top: 9rem;
+    left: 93vw;
     padding: 1.3rem 1.5rem;
     background-color: #000;
     cursor: pointer;
+    
 }
 .toggleBtn i{
     color: #fff;
