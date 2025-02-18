@@ -8,3 +8,6 @@ def landingPage(request):
 def registerPage(request):
     return render(request, 'register.html')
 
+def eventPage(request):
+    return render(request, 'event.html')
+
