@@ -6,85 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="{% static 'attendee\register.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <section class="container">
-        <header>Registration Form</header>
-        <form action="#" class="form">
-            <div class="input-box">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter full name" required/>
-            </div>
-
-            <div class="input-box">
-                <label>Email Address</label>
-                <input type="text" placeholder="Enter email address" required/>
-            </div>
-            
-            <div class="column">
+    <!-- MAKE A LOGIN FORM -->
+     <div class="container">
+        <div class="curved-shape"></div>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
                 <div class="input-box">
-                    <label>Phone Number</label>
-                    <input type="number" placeholder="Enter phone number" required/>
+                    <input type="text" required>
+                    <label for=""> Username</label>
+                   
                 </div>
 
                 <div class="input-box">
-                    <label>Birth Date</label>
-                    <input type="date" placeholder="Enter birth date" required/>
+                    <input type="text" required>
+                    <label for="">Password</label>
+                    
                 </div>
-            </div>
-            <div class="gender-box">
-                <h3>Gender</h3>
-                <div class="gender-option">
-                    <div class="gender">
-                        <input type="radio" id="check-male" name="gender"checked/>
-                        <label for="check-male">Male</label>
-                    </div>
-
-                    <div class="gender">
-                        <input type="radio" id="check-female" name="gender"/>
-                        <label for="check-female">Female</label>
-                    </div>
-
-                    <div class="gender">
-                        <input type="radio" id="check-other" name="gender"/>
-                        <label for="check-other">Prefer not to say</label>
-                    </div>
+                <div class="input-box">
+                    <button class="btn" type="submit">Login</button>
                 </div>
-            </div>
-
-            <div class="input-box address">
-                <label>Address</label>
-                <input type="text" placeholder="Enter street address" required/>
-                <input type="text" placeholder="Enter street address line 2" required/>
-                <div class="column">
-                <div class="select-box">
-                    <select>
-                        <option hidden>Country</option>
-                        <option>India</option>
-                        <option>America</option>
-                        <option>London</option>
-                        <option>Canada</option>
-                        <option>Australia</option>
-                        <option>Korea</option>
-                        <option>Japan</option>
-                        <option>Nepal</option>
-                        <option>China</option>
-                        <option>Brazil</option>
-                        <option>France</option>
-                    </select>
+                <div class="regi-link">
+                    <p>Don't have an account ? <a href="#" class="SignUpLink">Sign Up</a></p>
                 </div>
-                <input type="text" placeholder="Enter your city" required/>
-                </div>
-
-                <div class="column">
-                    <input type="text" placeholder="Enter your region" required/>
-                    <input type="number" placeholder="Enter postal code" required/>
-                </div>
-            </div> 
-            <button>Submit</button>
-        </form>
-    </section>
-
+            </form>
+        </div>
+        <div class="info-content login">
+            <h2>WELCOME BACK!</h2>
+            <p>Enter your user name and password to login.</p>
+        </div>
+     </div>
 <script src="{% static 'attendee\register.js' %}"></script>
     
 </body>

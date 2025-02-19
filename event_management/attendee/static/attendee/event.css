@@ -4,9 +4,6 @@
     font-family: "Rubik", sans-serif;
 }
 
-.event-list-container img{
-    height: 3rem;
-}
 
 .event-list-container h2{
     font-size: 30px;
@@ -16,5 +13,26 @@
 
 .event-list-container .events{
     display: grid;
+    gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.event{
+    padding: 0.5rem;
+    border-radius: 12px;
+    /* border: 2px solid #023047d5; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* margin: 0.5rem; */
+    transition: 0.3s;
+}
+
+.event:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.event img{
+    border-radius: 12px;
+    height: 40%;
+    width: 100%;
+    min-height: 10rem;
 }
