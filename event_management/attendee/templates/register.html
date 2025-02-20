@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="{% static 'attendee\register.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <!-- MAKE A LOGIN FORM -->
-     <div class="container">
+    <div class="container">
         <div class="curved-shape"></div>
+        <div class="curved-shape2"></div>
         <div class="form-box login">
-            <h2>Login</h2>
+            <h2 class="animation" style="--D:0">Login</h2>
             <form action="#">
-                <div class="input-box">
+                <div class="input-box animation" style="--D:1">
                     <input type="text" required>
                     <label for=""> Username</label>
-                   
+                    <i class='bx bxs-user'></i>
                 </div>
 
-                <div class="input-box">
+                <div class="input-box animation" style="--D:2">
                     <input type="text" required>
                     <label for="">Password</label>
-                    
+                    <i class='bx bxs-lock'></i>
+
                 </div>
-                <div class="input-box">
+                <div class="input-box animation" style="--D:3">
                     <button class="btn" type="submit">Login</button>
                 </div>
-                <div class="regi-link">
+                <div class="regi-link animation" style="--D:4">
                     <p>Don't have an account ? <a href="#" class="SignUpLink">Sign Up</a></p>
                 </div>
             </form>
         </div>
         <div class="info-content login">
-            <h2>WELCOME BACK!</h2>
-            <p>Enter your user name and password to login.</p>
+            <h2 class="animation" style="--D:0">WELCOME BACK!</h2>
+            <p class="animation" style="--D:1">Enter your user name and password to login.</p>
         </div>
-     </div>
-<script src="{% static 'attendee\register.js' %}"></script>
-    
+
+
+        <div class="form-box register">
+            <h2 class="animation">Sign Up</h2>
+            <form action="#">
+                <div class="input-box animation">
+                    <input type="text" required>
+                    <label for=""> Username</label>
+
+                </div>
+
+                <div class="input-box animation">
+                    <input type="text" required>
+                    <label for="">Password</label>
+
+                </div>
+                <div class="input-box animation">
+                    <button class="btn" type="submit">Register</button>
+                </div>
+                <div class="regi-link animation">
+                    <p>Don't have an account ? <a href="#" class="SignInLink">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="info-content register">
+            <h2 class="animation">Welcome!</h2>
+            <p class="animation">Fill the required fields to register.</p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="{% static 'attendee\register.js' %}"></script>
+
 </body>
+
 </html>
