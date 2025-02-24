@@ -49,36 +49,46 @@ body {
     transform: translateX(0%);
     transition: .7s;
     opacity: 1;
-    transition-delay: calc(.1s * var(--D));
+    transition-delay: calc(.1s * var(--S));
 
 }
 .container.active .form-box.login .animation{
     transform: translateX(-150%);
     opacity: 1;
+    transition-delay: calc(.1s * var(--D));
+
 }
 .form-box.register {
-    display: none;
     right: 0;
-    padding: 0 60px;
+    padding: 0 30px;
 }
 .form-box.register .animation{
     transform: translateX(120%);
     transition: .7s ease;
-    opacity: 0;
-    
-    transition-delay: calc(.1s * var(--D));
+    opacity: 0; 
+    filter: blur(10px);
+    transition-delay: calc(.1s * var(--S));
 
 }
 .container.active .form-box.register .animation{
-    transform: translateX(-150%);
+    transform: translateX(15%);
     opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--D));
 }
 .form-box h2 {
     font-size: 32px;
     text-align: center;
 }
 
-.form-box .input-box {
+.form-box.register .input-box {
+    position: relative;
+    width: 100%;
+    height: 13%;
+    margin-top: 25px;
+}
+
+.form-box.login .input-box {
     position: relative;
     width: 100%;
     height: 40%;
@@ -193,25 +203,37 @@ body {
 .info-content.login {
     right: 0;
     text-align: right;
-    padding: 0 40px 60px 150px;
+    padding: 0 40px 60px 150px;   
 }
 .info-content.login .animation{
     transform: translateX(0%);
     transition: .7s ease;
-    transition-delay: calc(.1s * var(--D));
+    transition-delay: calc(.1s * var(--s));
 }
 .container.active .info-content.login .animation{
-    transform: translateX(120%);
+    transform: translateX(150%);
     opacity: 1;
+    filter: blur(10px);
+    transition-delay: calc(.1s * var(--D));
 }
 
 .info-content.register {
-    right: 0;
     text-align: right;
     padding: 0 40px 60px 150px;
-    display: none;
+    left: -400px;
 }
-
+.info-content.register .animation{
+    transform: translateX(0%);
+    transition: .7s ease;
+    opacity: 0;
+    filter: blur(10p);
+    transition-delay: calc(.1s * var(--S));
+}
+.container.active .info-content.register .animation{
+    transform: translateX(150%);
+    opacity: 1;
+    filter: blur(0);
+}
 .info-content h2 {
     text-transform: uppercase;
     font-size: 36px;
@@ -232,10 +254,12 @@ body {
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom right;
     transition: 1.5s ease;
+    transition-delay: 1.6s;
 }
 
 .container.active .curved-shape {
     transform: rotate(0deg) skewY(0deg);
+    transition-delay: .5s;
 }
 
 .container .curved-shape2 {
@@ -244,14 +268,14 @@ body {
     top: 100%;
     height: 700px;
     width: 850px;
-    /*background: linear-gradient(45deg, #25252b, #ff2770);*/
     background: #25252b;
     border-top: 3px solid #ff2770;
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom left;
     transition: 1.5s ease;
+    transition-delay: .5s;
 }
 .container.active .curved-shape2 {
     transform: rotate(-11deg) skewY(-41deg);
-    transition-delay: 1.2s;
+    transition-delay: .1s;
 } 

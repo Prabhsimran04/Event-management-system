@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link style css -->
-    <link rel="stylesheet" href="{% static 'attendee\event.css' %}">
-    <title>List of events</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link style css -->
+  <link rel="stylesheet" href="{% static 'attendee\event.css' %}">
+  <title>List of events</title>
+  <link rel="stylesheet" href="{% static 'attendee\style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+
 <body>
-    <div class="event-list-container">
-        <h2>6 events</h2>
 
-        <div class="events">
-              <div class="event">
-                <img src="https://th.bing.com/th/id/OIP.4jdgL0CzHEyS2A26eFNNJwHaEB?w=735&h=400&rs=1&pid=ImgDetMain" alt=""/>
-                <h3 class="event-title">Musical Event</h3>
-                <div class="details">
-                    Music has the power to heal the soul and pull distant hearts together.
-                </div>
-                <a href="#" class="details-btn">More Details</a>
-              </div>
+      <!-- Header/Navbar Start-->
+      <div class="header">
+        <a href="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" class="logo">
+            <img src="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" alt="">
+        </a>
 
-              <div class="event">
-                <img src="https://th.bing.com/th/id/OIP.wYgpj3wpfD42Kr761ooZ9AHaEu?rs=1&pid=ImgDetMain" alt=""/>
-                <h3 class="event-title">Book Fair</h3>
-                <div class="details">
-                    A book fair is a special kind of fair where various kinds of books are displayed and sold. It allows buying books at a cheap rate. The leading organizations of a book fair are Bangla Academy, Public Library, Biswa Sahitya Kendra, etc.
-                </div>
-                <a href="#" class="details-btn">More Details</a>
-              </div>
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#Review">Review</a>
+            <a href="#Contact">Contact</a>
+            <a href="register">Register</a>
+            <a href="event">Event</a>
+        </nav>
+        <div class="fas fa-bars" id="MenuBtn"></div>
+    </div>
 
-              <div class="event">
-                <img src="https://th.bing.com/th/id/OIP.4jdgL0CzHEyS2A26eFNNJwHaEB?w=735&h=400&rs=1&pid=ImgDetMain" alt=""/>
-                <h3 class="event-title">Musical Event</h3>
-                <div class="details">
-                    Music has the power to heal the soul and pull distant hearts together.
-                </div>
-                <a href="#" class="details-btn">More Details</a>
-              </div>
+  <div class="event-list-container">
+    <h2>Events</h2>
 
-              <div class="event">
-                <img src="https://th.bing.com/th/id/OIP.4jdgL0CzHEyS2A26eFNNJwHaEB?w=735&h=400&rs=1&pid=ImgDetMain" alt=""/>
-                <h3 class="event-title">Musical Event</h3>
-                <div class="details">
-                    Music has the power to heal the soul and pull distant hearts together.
-                </div>
-                <a href="#" class="details-btn">More Details</a>
-              </div>
-
-              <div class="event">
-                <img src="https://th.bing.com/th/id/OIP.4jdgL0CzHEyS2A26eFNNJwHaEB?w=735&h=400&rs=1&pid=ImgDetMain" alt=""/>
-                <h3 class="event-title">Musical Event</h3>
-                <div class="details">
-                    Music has the power to heal the soul and pull distant hearts together.
-                </div>
-                <a href="#" class="details-btn">More Details</a>
-              </div>
-
-              <div class="event">
-                <img src="https://th.bing.com/th/id/OIP.4jdgL0CzHEyS2A26eFNNJwHaEB?w=735&h=400&rs=1&pid=ImgDetMain" alt=""/>
-                <h3 class="event-title">Musical Event</h3>
-                <div class="details">
-                    Music has the power to heal the soul and pull distant hearts together.
-                </div>
-                <a href="#" class="details-btn">More Details</a>
-              </div>
-
+    <div class="events">
+      {% for event in events%}
+      <div class="event">
+        <!-- <img src="https://cdn.chandigarhfirst.com/wp-content/uploads/2022/03/273170246_2032168566951939_1502333009816442575_n-750x536.jpg" alt="" /> -->
+        <h2 class="event-title">{{ event.title}}</h2>
+        <div class="details">
+          {{ event.details }}
+         
         </div>
 
-    </div> 
-   
-    <script src="{% static 'attendee\event.js' %}"></script>
+        <a href="#" class="details-btn">More Details</a>
+      </div>
+      {% endfor %}
+
+      <!-- <div class="event"> 
+        <img src="https://th.bing.com/th/id/OIP.wYgpj3wpfD42Kr761ooZ9AHaEu?rs=1&pid=ImgDetMain" alt="" />
+        <h2 class="event-title">Book Fair</h2>
+        <div class="details">
+          A book fair is a special kind of fair where various kinds of books are displayed and sold. It allows buying
+          books at a cheap rate. The leading organizations of a book fair are Bangla Academy, Public Library, Biswa
+          Sahitya Kendra, etc.
+        </div>
+
+
+        <a href="#" class="details-btn">More Details</a>
+
+      </div>
+
+      <div class="event">
+        <img src="https://th.bing.com/th/id/OIP.EsQCJSohL-LLe2e4iCHemQAAAA?rs=1&pid=ImgDetMain" alt="" />
+        <h2 class="event-title">Carnival</h2>
+        <div class="details">
+          Carnivals are vibrant celebrations filled with music, dance, and colorful costumes. But what makes these festivals so special? Carnivals are a blend of cultural traditions, historical events, and community spirit. Originating from ancient festivals, they have evolved into grand spectacles enjoyed worldwide.
+        </div>
+        <a href="#" class="details-btn">More Details</a>
+      </div>
+    </div> -->
+  </div>
+  </div>
+
+  <script src="{% static 'attendee\event.js' %}"></script>
 </body>
+
 </html>

@@ -1,38 +1,107 @@
-.event-list-container{
-    max-width: 900px;
-    margin: 20px auto;
+body{
+    background-image: linear-gradient(to left top, #8bc6f2, #8fd0f0, #99d8ee, #a6e0eb, #b6e7ea, #b5e7ea, #b4e8eb, #b3e8eb, #a1e2ee, #90dbf3, #84d3f8, #7ecafc);
+    height: calc(100vh - 120px);
+}
+.event-list-container {
+    /* max-width: 900px; */
+    margin: 120px auto;
     font-family: "Rubik", sans-serif;
 }
 
-
-.event-list-container h2{
+.event-list-container h2 {
     font-size: 30px;
     border-left: 4px solid #023047;
     padding-left: 20px;
 }
 
-.event-list-container .events{
+.event-list-container .events {
     display: grid;
-    gap: 2rem;
+    gap: 24px;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 40px;
 }
-.event{
-    padding: 0.5rem;
+
+.event-list-container .events img {
+    width: 100%;
+}
+
+.event-list-container .event {
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    /* padding: 24px; */
+    border-radius: 16px;
+    transition: all 400ms ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-list-container .event:hover {
+    transform: scale(1.03);
+}
+
+.event-list-container .event-title {
+    font-size: 28px;
+    padding: 10px 10px;
+    margin: 0;
+    color: #2C3E50 ;
+}
+
+.event-list-container .details {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #2C3E50;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.event-list-container .details-btn {
+    text-decoration: none;
+    border: 1px solid #023047;
+    color: #2C3E50;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    transition: all 400ms ease;
+}
+
+.event-list-container .details-btn:hover {
+    background: #070607;
+    color: #fff;
+}
+
+.event {
+    padding: 1rem;
     border-radius: 12px;
     /* border: 2px solid #023047d5; */
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     /* margin: 0.5rem; */
     transition: 0.3s;
+
 }
 
-.event:hover{
+.event:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.event img{
+.event img {
     border-radius: 12px;
     height: 40%;
     width: 100%;
     min-height: 10rem;
+}
+
+@media (max-width: 940px) {
+    .event-list-container .events {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .event-list-container .events {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
