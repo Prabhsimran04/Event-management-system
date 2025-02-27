@@ -11,7 +11,7 @@ LoginLink.addEventListener('click',()=>{
 // register.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    const registerForm = document.getElementById('register-form');
+    const registerForm = document.getElementById('register_form');
     const loginForm = document.querySelector('.form-box.login form');
 
     // Handle registration

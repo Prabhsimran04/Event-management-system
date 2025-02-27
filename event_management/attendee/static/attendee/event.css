@@ -1,4 +1,4 @@
-body{
+ body{
     background-image: linear-gradient(to left top, #8bc6f2, #8fd0f0, #99d8ee, #a6e0eb, #b6e7ea, #b5e7ea, #b4e8eb, #b3e8eb, #a1e2ee, #90dbf3, #84d3f8, #7ecafc);
     height: calc(100vh - 120px);
 }

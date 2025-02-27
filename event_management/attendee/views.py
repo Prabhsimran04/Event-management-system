@@ -13,6 +13,9 @@ def landingPage(request):
 def registerPage(request):
     return render(request, 'register.html')
 
+def eventdetailPage(request):
+    return render(request, 'eventdetail.html')
+
 
 
 @csrf_exempt
