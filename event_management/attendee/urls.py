@@ -7,5 +7,5 @@ urlpatterns = [
     path("api/register", views.register),
     path("api/login", views.login_view),
     path("event", views.eventPage),
-    path("eventdetail", views.eventdetailPage),
+    path("eventdetail/<str:event_id>", views.eventdetailPage, name="event_detail"),
 ]

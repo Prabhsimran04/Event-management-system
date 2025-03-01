@@ -6,9 +6,573 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'attendee\eventdetail.css' %}">
+    <!-- Favicons -->
+  <link href="{% static 'attendee/img/favicon.png'%}" rel="icon">
+  <link href="{% static 'attendee/img/favicon.pngimg/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'attendee/lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'attendee/lib/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
+  <link href="{% static 'attendee/lib/animate/animate.min.css'%}" rel="stylesheet">
+  <link href="{% static 'attendee/lib/venobox/venobox.css" rel="stylesheet'%}">
+  <link href="{% static 'attendee/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet'%}">
+  <link href="{% static 'attendee/css/style.css'%}" rel="stylesheet">
 </head>
 <body>
+    {% include "components/navbar.html" %}
+
+
+    <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">The Live<br><span>Musical</span> Event </h1>
+      <p class="mb-4 pb-0">24 june, Guru Nanak Dev University,Amritsar</p>
+      <a href="https://www.youtube.com/watch?v=dP9sKoQhdgE"  class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">About The Event</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About The Event</h2>
+            <p>Musicals are a captivating blend of acting, singing, and dancing that originated in ancient Greece. They take years to develop and involve meticulous rehearsals, stunning costumes, and live orchestras.</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <p>Guru Nanak Dev University,Amritsar</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>When</h3>
+            <p>Monday<br>june 24</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Event Speakers</h2>
+          <p>Here are some of our speakers</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="speaker ">
+              <img src="https://th.bing.com/th/id/OIP.-ZAWtN7MIKmRg7BkbjF1qAAAAA?pid=ImgDet&w=405&h=468&rs=1" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Nirvair pannu</a></h3>
+                <p>Nirvair Pannu is a 22-year-old Punjabi singer-songwriter from India who’s quickly making his mark on the music industry. His sound combines traditional Punjabi folk music with modern hip hop and R&B influences, creating a unique blend of sounds that reflect his own unique style. </p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="speaker ">
+              <img src="https://th.bing.com/th/id/OIP.j8fvR33cPrt9k47udG2p9AHaIF?rs=1&pid=ImgDetMain" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="speaker-details.html">Gurnam Bhullar</a></h3>
+                <p>Gurnam Bhullar is an Indian singer, actor, and lyricist known for his contributions to Punjabi music and films. He gained popularity with hit songs and has established himself as a prominent figure in the Indian pop music scene. </p>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+    </section>
+
+    <!--==========================
+      Schedule Section
+    ============================-->
+    <section id="schedule" class="section-with-bg">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2>Event Schedule</h2>
+          <p>Here is our event schedule</p>
+        </div>
+
+        
+
+        <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
+          necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+
+        <div class="tab-content row justify-content-center">
+
+          <!-- Schdule Day 1 -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-10">
+                <h4>Registration</h4>
+                <p>On the spot Registration, </p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                </div>
+                <h4>Keynote <span>Brenden Legros</span></h4>
+                <p>Facere provident incidunt quos voluptas.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>11:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                </div>
+                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
+                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>12:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                </div>
+                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
+                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                </div>
+                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
+                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>03:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                </div>
+                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
+                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>04:00 PM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                </div>
+                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
+                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- End Schdule Day 1 -->
+
+          
+
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==========================
+      Venue Section
+    ============================-->
+    <section id="venue" class="wow fadeInUp">
+
+      <div class="container-fluid">
+
+        <div class="section-header">
+          <h2>Event Venue</h2>
+          <p>Event venue location info and gallery</p>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 venue-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5392.369253451158!2d74.82222324974187!3d31.634405673951143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39196527e76e3995%3A0xf5779932d3dab5d0!2sGuru%20Nanak%20Dev%20University!5e0!3m2!1sen!2sin!4v1740725235983!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col-lg-6 venue-info">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8">
+                <h3>Guru Nanak Dev University, Amritsar</h3>
+                <p>Guru Nanak Dev University, established in 1969, blends academic excellence with Guru Nanak’s teachings, focusing on diverse disciplines and fostering research. It has earned top rankings, including an "A++" NAAC accreditation and recognition as a "University with Potential for Excellence." The university excels in sports, infrastructure, and community engagement, offering skill development and contributing to both national and international advancements in various fields.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+    </section>
+
     
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="gallery" class="wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="owl-carousel gallery-carousel">
+        <a href="{% static 'attendee/img/gallery/1.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/1.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/2.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/2.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/3.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/3.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/4.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/4.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/5.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/5.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/6.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/6.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/7.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/7.jpg'%}" alt=""></a>
+        <a href="{% static 'attendee/img/gallery/8.jpg'%}" class="venobox" data-gall="gallery-carousel"><img src="{% static 'attendee/img/gallery/8.jpg'%}" alt=""></a>
+      </div>
+
+    </section>
+    <!--==========================
+      F.A.Q Section
+    ============================-->
+<section id="faq" class="wow fadeInUp">
+
+    <div class="container">
+  
+      <div class="section-header">
+        <h2>Event F.A.Q</h2>
+      </div>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <ul id="faq-list">
+  
+              <li>
+                <a data-toggle="collapse" class="collapsed" href="#faq1">What is the date and time of the event? <i class="fa fa-minus-circle"></i></a>
+                <div id="faq1" class="collapse" data-parent="#faq-list">
+                  <p>
+                    The event will take place on Monday, june 24, 2023, from 2:00 PM to 8:00 PM.
+                  </p>
+                </div>
+              </li>
+      
+              <li>
+                <a data-toggle="collapse" href="#faq2" class="collapsed">Where is the event being held? <i class="fa fa-minus-circle"></i></a>
+                <div id="faq2" class="collapse" data-parent="#faq-list">
+                  <p>
+                    The event will be held at Guru Nanak Dev University,Amritsar.
+                  </p>
+                </div>
+              </li>
+      
+              <li>
+                <a data-toggle="collapse" href="#faq3" class="collapsed">How can I purchase tickets? <i class="fa fa-minus-circle"></i></a>
+                <div id="faq3" class="collapse" data-parent="#faq-list">
+                  <p>
+                    Tickets can be purchased online through our official website or at the venue on the day of the event, subject to availability.
+                  </p>
+                </div>
+              </li>
+      
+              <li>
+                <a data-toggle="collapse" href="#faq4" class="collapsed">Is there an age limit for attendees? <i class="fa fa-minus-circle"></i></a>
+                <div id="faq4" class="collapse" data-parent="#faq-list">
+                  <p>
+                    The event is open to all ages. However, children under 12 must be accompanied by an adult.
+                  </p>
+                </div>
+              </li>
+      
+              <li>
+                <a data-toggle="collapse" href="#faq5" class="collapsed">Will food and drinks be available at the event? <i class="fa fa-minus-circle"></i></a>
+                <div id="faq5" class="collapse" data-parent="#faq-list">
+                  <p>
+                    Yes, a variety of food and beverage options will be available for purchase at the venue.
+                  </p>
+                </div>
+              </li>
+      
+              <li>
+                <a data-toggle="collapse" href="#faq6" class="collapsed">What should I do if I have lost my ticket? <i class="fa fa-minus-circle"></i></a>
+                <div id="faq6" class="collapse" data-parent="#faq-list">
+                  <p>
+                    If you lose your ticket, please contact our customer service team as soon as possible for assistance with ticket reissue.
+                  </p>
+                </div>
+              </li>
+      
+            </ul>
+        </div>
+      </div>
+  
+    </div>
+  
+  </section>
+
+    <!--==========================
+      Subscribe Section
+    ============================-->
+    <section id="subscribe">
+      <div class="container wow fadeInUp">
+        
+
+        <div class="section-header">
+            <h2>Buy Tickets</h2>
+            <p> To enjoy the show buy tickets now.</p>
+          </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Buy Ticket Section
+    ============================-->
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+      <div class="container">
+
+        
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
+                <h6 class="card-price text-center">Rs.350</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
+                <h6 class="card-price text-center">Rs.500</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
+                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
+                <h6 class="card-price text-center">Rs.800</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
+                </ul>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Order Form -->
+      <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Buy Tickets</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                  <select id="ticket-type" name="ticket-type" class="form-control" >
+                    <option value="">-- Select Your Ticket Type --</option>
+                    <option value="standard-access">Standard Access</option>
+                    <option value="pro-access">Pro Access</option>
+                    <option value="premium-access">Premium Access</option>
+                  </select>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn">Buy Now</button>
+                </div>
+              </form>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+    </section>
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>For other information contact us</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>Guru Nanak Dev University,Amritsar</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+91 2244556778">+91 2244556778</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="eventdetails@gmail.com">eventdetails@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+  <script src="{% static 'attendee/lib/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/jquery/jquery-migrate.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/easing/easing.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/superfish/hoverIntent.js'%}"></script>
+  <script src="{% static 'attendee/lib/superfish/superfish.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/wow/wow.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/venobox/venobox.min.js'%}"></script>
+  <script src="{% static 'attendee/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'attendee/contactform/contactform.js'%}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'attendee/js/main.js'%}"></script>
     <script src="{% static 'attendee\eventdetail.js' %}"></script>
 </body>
 </html>

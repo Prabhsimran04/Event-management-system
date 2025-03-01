@@ -13,101 +13,44 @@
 </head>
 <body>
   <div class="container">
-    <div class="item-container">
-      <div class="img-container">
-        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/4e/75/c8/4e75c88f-2f03-2138-d49f-65cb417bc218/cover.jpg/1200x1200bf-60.jpg" alt="Event image"> 
-      </div>
-      <div class="body-container">
-        <div class="overlay"></div>
-
-        <div class="event-info">
-          <p class="title">Nirvair Pannu Live Concert</p>
-          <div class="seprator"></div>
-          <p class="info">Live Concert</p>
-          <p class="price">Rs.350</p>
-
-          <div class="additional-info">
-            <p class="info">
-              <i class="fas fa-map-marker-alt"></i>
-              Guru Nanak Dev University,Amritsar.
-            </p>
-            <p class="info">
-              <i class="fas fa-calender"></i>
-              Sat, June 21, 4:00PM evening
-            </p>
-            
-            <p class="info-description"> 
-              We invite you to come together for an unforgettable evening of music and joy at Guru Nanak Dev university! Let’s gather to celebrate the power of music, connect with one another, and create lasting memories <span> more..... </span>
-            </p>
-          </div>
+    {% for event in events %}
+    
+      <div class="item-container">
+        <div class="img-container">
+          <img src="{{ event.link }}" alt="Event image"> 
         </div>
-        <button class="action">Book it</button>
-      </div>
-    </div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
-    <div class="item-container">
-      <div class="img-container">
-        <img src="https://th.bing.com/th/id/OIP.JoVWXx1zBsyHkSMphxbP5gHaE8?rs=1&pid=ImgDetMain" alt="Carnival image"> 
-      </div>
-      <div class="body-container">
-        <div class="overlay"></div>
+          <div class="event-info">
+            <p class="title"><a href="{% url "event_detail" event.id %}">{{ event.title }}</a></p>
+            <div class="seprator"></div>
+            <p class="info">{{ event.info }}</p>
+            <p class="price">Rs.{{ event.price }}</p>
 
-        <div class="event-info">
-          <p class="title">Carnival</p>
-          <div class="seprator"></div>
-          <p class="info">Fun Fair</p>
-          <p class="price">Rs.200</p>
-
-          <div class="additional-info">
-            <p class="info">
-              <i class="fas fa-map-marker-alt"></i>
-              Kanwar Avenue near Golden Gate,Amritsar.
-            </p>
-            <p class="info">
-              <i class="fas fa-calender"></i>
-              Wed to Fri, June 25 to june 27
-            </p>
-            
-            <p class="info-description"> 
-              Indian carnivals are vibrant celebrations that showcase the country's rich cultural diversity. They feature colorful parades, traditional music, dance performances, and delicious local cuisine, creating a festive atmosphere that brings communities together. <span> more..... </span>
-            </p>
+            <div class="additional-info">
+              <p class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ event.venue }}
+              </p>
+              <p class="info">
+                <i class="fas fa-calender"></i>
+                {{ event.time }}
+              </p>
+              
+              <p class="info-description"> 
+                {{ event.description }} <span> more..... </span>
+              </p>
+            </div>
           </div>
+          <button class="action">Book it</button>
         </div>
-        <button class="action">Book it</button>
       </div>
-    </div>
+    {% endfor %}
 
-    <div class="item-container">
-      <div class="img-container">
-        <img src="https://th.bing.com/th/id/OIP.p4v84v-Mbgsf7uHd2mq1cQAAAA?rs=1&pid=ImgDetMain" alt="book fair image"> 
-      </div>
-      <div class="body-container">
-        <div class="overlay"></div>
+    
 
-        <div class="event-info">
-          <p class="title">National Book Fair</p>
-          <div class="seprator"></div>
-          <p class="info">Book Fair</p>
-          <p class="price">Free</p>
-
-          <div class="additional-info">
-            <p class="info">
-              <i class="fas fa-map-marker-alt"></i>
-             DAV College,Amritsar.
-            </p>
-            <p class="info">
-              <i class="fas fa-calender"></i>
-              Monday, June 23, 11:00 AM 
-            </p>
-            
-            <p class="info-description"> 
-              A book fair is a vibrant event where authors, readers, and booksellers come together to celebrate literature. These gatherings often feature a variety of books, cultural activities, and opportunities for networking, making them enjoyable and enriching experiences for all involved. <span> more..... </span>
-            </p>
-          </div>
-        </div>
-        <button class="action">Book it</button>
-      </div>
-    </div>
+    
 
 
   </div>

@@ -76,11 +76,12 @@ body{
     padding: 8px;
 }
 
-.title,
+.title a,
 .price {
     color: #18537a;
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
     letter-spacing: 1px;
     margin: 12px;
 }
@@ -116,7 +117,7 @@ body{
     margin-right: 4px;
 }
 
-.info span{
+.info-description span{
     color: #18537a;
     font-weight: bolder;
 }
