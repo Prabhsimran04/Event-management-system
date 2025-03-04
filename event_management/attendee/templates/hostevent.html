@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'attendee\hostevent.css' %}">
+    <title>Host an Event</title>
+</head>
+
+<body>
+
+    <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+
+      
+    <section class="container">
+        <header>Host Form</header>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label>Event name</label>
+                <input type="text" placeholder="Enter event name" required/>
+            </div>
+
+            <div class="input-box">
+                <label>Event Place</label>
+                <input type="text" placeholder="Enter event place"required/>
+            </div>
+            <div class="input-box">
+                <label>Number of attendees allowed</label>
+                <input type="number" placeholder="Enter number of attendes allowed" required/>
+            </div>
+
+            <div class="column">
+                
+                <div class="input-box">
+                    <label>Price</label>
+                    <input type="number" placeholder="Enter price" required/>
+                </div>
+
+                <div class="input-box">
+                    <label>Date of event</label>
+                    <input type="date" placeholder="Enter date of event" required/>
+                </div>
+
+                
+
+            </div>
+            <div class="input-box">
+                <label>Description of event</label>
+                <input type="text" placeholder="Enter Description of event" required/>
+            </div>
+            <button>Submit</button>
+        </form>
+    </section>
+    <script src="{% static 'attendee/js/main.js'%}"></script>
+</body>
+</html>
