@@ -147,7 +147,7 @@ h6 {
 #header {
   height: 90px;
   padding: 25px 0;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   top: 0;
   right: 0;

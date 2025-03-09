@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 alert('Login successful!');
-                window.location.replace('/register');
+                window.location.replace('/dashboard');
                 // Optionally redirect to another page
             } else {
                 alert('Login failed: ' + data.message);

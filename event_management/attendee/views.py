@@ -23,6 +23,9 @@ def eventdetailPage(request, event_id):
 def hosteventPage(request):
     return render(request, 'hostevent.html')
 
+def dashboardPage(request):
+    return render(request, 'dashboard.html')
+
 
 
 @csrf_exempt
