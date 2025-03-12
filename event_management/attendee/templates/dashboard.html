@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'attendee\dashboard.css' %}">
 </head>
+
 <body>
-     <div class="container">
+    <div class="container">
         <div class="topbar">
             <div class="logo">
                 <h2>Brand.</h2>
@@ -20,7 +24,8 @@
             </div>
             <i class="fas fa-bell"></i>
             <div class="user">
-                <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740" alt="">
+                <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740"
+                    alt="">
             </div>
         </div>
         <div class="sidebar">
@@ -82,8 +87,62 @@
                 </li>
             </ul>
         </div>
-        <div class="main"></div>
-     </div>
-    <script src="{% static 'attendee/js/main.js'%}"></script>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">1217</div>
+                        <div class="card-name">Students</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">47</div>
+                        <div class="card-name">Teachers</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">68</div>
+                        <div class="card-name">Employees</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">Rs.45000</div>
+                        <div class="card-name">Earnings</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-indian-rupee-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Earnings (past 12 months)</h2>
+                    <canvas id="linechart"></canvas>
+                </div>
+                <div class="chart" id="doughnut-chart">
+                    <h2>Employees</h2>
+                    <canvas id="doughnut"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script> 
+    <script src="{% static 'attendee/dashboard.js'%}"></script>
 </body>
+
 </html>

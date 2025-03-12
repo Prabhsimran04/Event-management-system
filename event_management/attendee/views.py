@@ -26,6 +26,10 @@ def hosteventPage(request):
 def dashboardPage(request):
     return render(request, 'dashboard.html')
 
+def viewsattendeePage(request):
+    return render(request, 'viewsattendee.html')
+
+
 
 
 @csrf_exempt
