@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'attendee\viewattendees.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>Brand.</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="search here">
+                <label for="search"> <i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740"
+                    alt="">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>Events</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div>Previous Events</div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <div>Settings</div>
+                    </a>
+                </li>
+
+              
+            </ul>
+        </div>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">12</div>
+                        <div class="card-name">Events</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">600</div>
+                        <div class="card-name">Attendees</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+
+                {% comment %} <div class="card">
+                    <div class="card-content">
+                        <div class="number">68</div>
+                        <div class="card-name">Employees</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div> {% endcomment %}
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">Rs.45000</div>
+                        <div class="card-name">Earnings</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-indian-rupee-sign"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="recentevents">
+                    <div class="cardHeader">
+                        <h2>Recent Events</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Attendees</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Musical Concert</td>
+                                <td>Rs.500</td>
+                                <td>8000</td>
+                                <td><span class="Event status">Joyful</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Carnival</td>
+                                <td>Rs.350</td>
+                                <td>3000</td>
+                                <td><span class="Event status">Unforgettable</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Book Fair</td>
+                                <td>Free</td>
+                                <td>2000</td>
+                                <td><span class="Event status">Successful</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Charity event</td>
+                                <td>Free</td>
+                                <td>11000</td>
+                                <td><span class="Event status">Impactful</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Art exhibitions</td>
+                                <td>Rs.200</td>
+                                <td>4000</td>
+                                <td><span class="Event status">Vibrant</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Comedy Show</td>
+                                <td>Rs.600</td>
+                                <td>4000</td>
+                                <td><span class="Event status">Hilarious</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Magic Show</td>
+                                <td>Rs.200</td>
+                                <td>4500</td>
+                                <td><span class="Event status">Mesmerizing</span></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Poetry Slams</td>
+                                <td>Rs.750</td>
+                                <td>2500</td>
+                                <td><span class="Event status">Powerful</span></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="{% static 'attendee/viewattendees.js'%}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

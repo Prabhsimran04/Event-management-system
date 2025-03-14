@@ -11,7 +11,7 @@ var myChart = new Chart(ctx, {
                 
             ],
             borderColor: [
-                'rgba(41, 155, 99)',
+                'rgb(72, 54, 235)',
             ],
             borderWidth: 1
         }]
@@ -25,9 +25,9 @@ var ctx = document.getElementById('doughnut').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Academic', 'Non-academic', 'Administration', 'Others'],
+        labels: ['Event1', 'Event2', 'Event3', 'Event4'],
         datasets: [{
-            label: 'Employees',
+            label: 'Attendees',
             data: [42,12,8,6],
             backgroundColor: [
                 'rgba(41,155,99,1)',
@@ -38,7 +38,7 @@ var myChart = new Chart(ctx, {
             ],
             borderColor: [
                 'rgba(41,155,99,1)',
-                'rgba(54, 162, 235, 1)',
+                'rgb(72, 54, 235)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(120,46,139,1)',
             ],

@@ -26,8 +26,8 @@ def hosteventPage(request):
 def dashboardPage(request):
     return render(request, 'dashboard.html')
 
-def viewsattendeePage(request):
-    return render(request, 'viewsattendee.html')
+def viewattendeesPage(request):
+    return render(request, 'viewattendees.html')
 
 
 
