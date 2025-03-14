@@ -1,3 +1,9 @@
+:root{
+    --blue: #381cd4;
+    --white: #ffffff;
+    --black: #222;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -210,7 +216,7 @@
 }
 
 .details .recentevents table tr{
-    color: var(--black1);
+    color: var(--black);
     border-bottom: 1px solid rgb(0, 0, 0, 0.1);
 }
 
@@ -225,4 +231,24 @@
 
 .details .recentevents table tr td{
     padding: 10px;
+}
+
+.details .recentevents table tr td:last-child{
+    text-align: end; 
+}
+
+.details .recentevents table tr td:nth-child(2){
+    text-align: end; 
+}
+
+.details .recentevents table tr td:nth-child(3){
+    text-align: center; 
+}
+.event .info{
+    padding: 2px 4px;
+    /* background: #8de02c; */
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
 }
