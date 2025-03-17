@@ -113,9 +113,9 @@ html::-webkit-scrollbar-track{
     text-transform: uppercase;
 }
 .home .content p{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: lighter;
-    color: #ccc;
+    color: #ebeaf7e7;
     line-height: 1.8;
     padding: 1rem 0;
 }
