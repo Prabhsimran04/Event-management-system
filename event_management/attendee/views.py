@@ -30,6 +30,10 @@ def viewattendeesPage(request):
     return render(request, 'viewattendees.html')
 
 
+def dashboard_eventsPage(request):
+    return render(request, 'dashboard_events.html')
+
+
 
 
 @csrf_exempt
@@ -94,7 +98,7 @@ def eventPage(request):
                 "link": "https://th.bing.com/th/id/OIP.JoVWXx1zBsyHkSMphxbP5gHaE8?rs=1&pid=ImgDetMain",
                 "venue": "Kanwar Avenue near Golden Gate,Amritsar.",
                 "time": datetime.now().time(),
-                "description":" Indian carnivals are vibrant celebrations that showcase the country's rich cultural diversity. They feature colorful parades, traditional music, dance performances, and delicious local cuisine, creating a festive atmosphere that brings communities together. ",
+                "description":" A fun fair will be held on 24 june,2025 at Kanwar Avenue near Golden Gate, Amritsar.",
             },
             {
                 "id": 3,
@@ -104,7 +108,7 @@ def eventPage(request):
                 "link": "https://th.bing.com/th/id/OIP.p4v84v-Mbgsf7uHd2mq1cQAAAA?rs=1&pid=ImgDetMain",
                 "venue": "DAV College,Amritsar.",
                 "time": datetime.now().time(),
-                "description":"A book fair is a vibrant event where authors, readers, and booksellers come together to celebrate literature. These gatherings often feature a variety of books, cultural activities, and opportunities for networking, making them enjoyable and enriching experiences for all involved.",
+                "description":"A book fair will be held on 4 jul, 2025 at DAV college, Amritsar.",
             },
             
         ]
