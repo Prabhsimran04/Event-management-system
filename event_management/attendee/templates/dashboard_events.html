@@ -1,102 +1,135 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Events</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="{% static 'attendee\event.css' %}"> -->
     <link rel="stylesheet" href="{% static 'attendee\dashboard_events.css' %}">
 </head>
+
 <body>
-    <div class="container">
-        <div class="topbar">
-            <div class="logo">
-                <h2>Brand.</h2>
-            </div>
-            <div class="search">
-                <input type="text" id="search" placeholder="search here">
-                <label for="search"> <i class="fas fa-search"></i></label>
-            </div>
-            <i class="fas fa-bell"></i>
-            <div class="user">
-                <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740"
-                    alt="">
-            </div>
+  <div class="container">
+    <div class="topbar">
+      <div class="logo">
+        <h2>Brand.</h2>
+      </div>
+      <div class="search">
+        <input type="text" id="search" placeholder="search here">
+        <label for="search"> <i class="fas fa-search"></i></label>
+      </div>
+      <i class="fas fa-bell"></i>
+      <div class="user">
+        <img
+          src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740"
+          alt="">
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fas fa-th-large"></i>
+            <div>Dashboard</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fas fa-user-graduate"></i>
+            <div>Events</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="{% url 'view_attendees' %}">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <div>View Attendees</div>
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            <div>Settings</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      {% for event in events %}
+
+      <div class="item-container">
+        <div class="img-container">
+          <img src="{{ event.url }}" alt="Event image">
         </div>
+        <div class="body-container">
+          <div class="overlay"></div>
 
-        <div class="sidebar">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-th-large"></i>
-                        <div>Dashboard</div>
-                    </a>
-                </li>
+          <div class="event-info">
+            <p class="title"><a href="{% url 'event_detail' event.id %}">{{ event.name }}</a></p>
+            <div class="seprator"></div>
+            <p class="info">{{ event.info }}</p>
+            <p class="price">Rs.{{ event.grade1_price }}</p>
 
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user-graduate"></i>
-                        <div>Events</div>
-                    </a>
-                </li>
+            <div class="additional-info">
+              <p class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ event.venue }}
+              </p>
+              <p class="info">
+                <i class="fas fa-calender"></i>
+                {{ event.date }}
+              </p>
 
-                <li>
-                    <a href="{% url "view_attendees" %}">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <div>View Attendees</div>
-                    </a>
-                </li>
+              <p class="info-description">
+                {{ event.description }} <span> more..... </span>
+              </p>
+            </div>
+          </div>
+          <button class="action">Book it</button>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
 
 
-                <li>
-                    <a href="#">
-                        <i class="fas fa-cog"></i>
-                        <div>Settings</div>
-                    </a>
-                </li>
-
-                <div class="container">
-                    {% for event in events %}
-                    
-                      <div class="item-container">
-                        <div class="img-container">
-                          <img src="{{ event.link }}" alt="Event image"> 
-                        </div>
-                        <div class="body-container">
-                          <div class="overlay"></div>
-                
-                          <div class="event-info">
-                            <p class="title"><a href="{% url "event_detail" event.id %}">{{ event.title }}</a></p>
-                            <div class="seprator"></div>
-                            <p class="info">{{ event.info }}</p>
-                            <p class="price">Rs.{{ event.price }}</p>
-                
-                            <div class="additional-info">
-                              <p class="info">
-                                <i class="fas fa-map-marker-alt"></i>
-                                {{ event.venue }}
-                              </p>
-                              <p class="info">
-                                <i class="fas fa-calender"></i>
-                                {{ event.time }}
-                              </p>
-                              
-                              <p class="info-description"> 
-                                {{ event.description }} <span> more..... </span>
-                              </p>
-                            </div>
-                          </div>
-                          <button class="action">Book it</button>
-                        </div>
-                      </div>
-                    {% endfor %}
-                
-                  </div>
+    <script>
+      $(document).ready(function(){
+        $(".gallery-carousel").owlCarousel({
+          items: 3, // Number of items to display
+          loop: true,
+          margin: 10,
+          nav: true,
+          dots: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
     
+        // Initialize Venobox
+        $('.venobox').venobox(); 
+      });
+    </script>
 
-    <script src="{% static 'attendee/dashboard_events.js'%}"></script>
+    <!-- <script src="{% static 'attendee/dashboard_events.js'%}"></script> -->
 </body>
+
 </html>

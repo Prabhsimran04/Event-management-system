@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
+from .models import *  
 
 
 import json
@@ -29,11 +30,18 @@ def dashboardPage(request):
 def viewattendeesPage(request):
     return render(request, 'viewattendees.html')
 
+def dashboard_userPage(request):
+    return render(request, 'dashboard_user.html')
+
 
 def dashboard_eventsPage(request):
-    return render(request, 'dashboard_events.html')
-
-
+    context = {
+        "events": []
+    }
+    events = Event.objects.all()
+    for event in events:
+        context["events"].append(event)
+    return render(request, 'dashboard_events.html', context)
 
 
 @csrf_exempt
@@ -79,38 +87,9 @@ def login_view(request):
 
 def eventPage(request):
     context = {
-        "events": [
-            {
-                "id": 1,
-                "title":"Musical Event",
-                "info": "Live Concert",
-                "price": 350,
-                "link": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/4e/75/c8/4e75c88f-2f03-2138-d49f-65cb417bc218/cover.jpg/1200x1200bf-60.jpg",
-                "venue": "Guru Nanak Dev University,Amritsar.",
-                "description":" A Musical event by Nirvair Pannu and Gurnam  will be held on 30 june 2025 at Guru Nanak Dev University,Amritsar. The event starts at 11.00am to 4.00pm.  ",
-                "time": datetime.now().time(),
-            },
-            {
-                "id": 2,
-                "title":"Carnival",
-                "info": "Fun Fair",
-                "price": 200,
-                "link": "https://th.bing.com/th/id/OIP.JoVWXx1zBsyHkSMphxbP5gHaE8?rs=1&pid=ImgDetMain",
-                "venue": "Kanwar Avenue near Golden Gate,Amritsar.",
-                "time": datetime.now().time(),
-                "description":" A fun fair will be held on 24 june,2025 at Kanwar Avenue near Golden Gate, Amritsar.",
-            },
-            {
-                "id": 3,
-                "title":"National Book Fair",
-                "info": "Book Fair",
-                "price": 0,
-                "link": "https://th.bing.com/th/id/OIP.p4v84v-Mbgsf7uHd2mq1cQAAAA?rs=1&pid=ImgDetMain",
-                "venue": "DAV College,Amritsar.",
-                "time": datetime.now().time(),
-                "description":"A book fair will be held on 4 jul, 2025 at DAV college, Amritsar.",
-            },
-            
-        ]
+        "events": []
     }
+    events = Event.objects.all()
+    for event in events:
+        context["events"].append(event)
     return render(request, 'event.html',context)

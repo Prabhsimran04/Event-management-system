@@ -12,4 +12,5 @@ urlpatterns = [
     path("dashboard", views.dashboardPage),
     path("viewattendees", views.viewattendeesPage, name="view_attendees"),
     path("dashboard_events", views.dashboard_eventsPage, name="dashboard_events"),
+    path("dashboard_user", views.dashboard_userPage, name="dashboard_user"),
 ]
