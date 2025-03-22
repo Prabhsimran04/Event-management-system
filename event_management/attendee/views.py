@@ -31,7 +31,13 @@ def viewattendeesPage(request):
     return render(request, 'viewattendees.html')
 
 def dashboard_userPage(request):
-    return render(request, 'dashboard_user.html')
+    context = {
+        "events": []
+    }
+    events = Event.objects.all()
+    for event in events:
+        context["events"].append(event)
+    return render(request, 'dashboard_user.html', context)
 
 
 def dashboard_eventsPage(request):
