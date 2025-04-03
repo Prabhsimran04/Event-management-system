@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
 from .models import *  
+from django.shortcuts import redirect
 
 
 import json
@@ -41,6 +42,8 @@ def dashboard_userPage(request):
 
 
 def dashboard_eventsPage(request):
+    if not request.user.is_authenticated:
+        redirect('')
     context = {
         "events": []
     }
@@ -92,6 +95,8 @@ def login_view(request):
     return JsonResponse({'success': False, 'message': 'Invalid request method.'})
 
 def eventPage(request):
+    if request.user.is_authenticated:
+        redirect('/dashboard_events')
     context = {
         "events": []
     }
