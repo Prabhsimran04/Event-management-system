@@ -32,6 +32,8 @@ def viewattendeesPage(request):
     return render(request, 'viewattendees.html')
 
 def dashboard_userPage(request):
+    if not request.user.is_authenticated:
+        return redirect('landingPage')
     context = {
         "events": []
     }
@@ -43,7 +45,7 @@ def dashboard_userPage(request):
 
 def dashboard_eventsPage(request):
     if not request.user.is_authenticated:
-        redirect('')
+        redirect('landingPage')
     context = {
         "events": []
     }
