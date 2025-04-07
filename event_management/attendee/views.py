@@ -23,6 +23,13 @@ def eventdetailPage(request, event_id):
     return render(request, 'eventdetail.html')
 
 def hosteventPage(request):
+    context = {
+        "events": []
+    }
+    events = Event.objects.all()
+    for event in events:
+        context["events"].append(event.name)
+        return render(request, 'hostevent.html', context)
     return render(request, 'hostevent.html')
 
 def dashboardPage(request):
