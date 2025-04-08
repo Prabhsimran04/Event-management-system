@@ -29,41 +29,58 @@
         <header>Host Form</header>
         <form action="#" class="form" id="host_event_form">
             <div class="input-box">
-                <label>Event name</label>
-                <input type="text" placeholder="Enter event name" name="event_name" required />
+                <label>Event Name</label>
+                <input type="text" placeholder="Enter event name" name="name" required />
             </div>
-
+    
             <div class="input-box">
-                <label>Event Place</label>
-                <input type="text" placeholder="Enter event place" name="event_place" required />
+                <label>Event Info</label>
+                <input type="text" placeholder="Enter event info (description or details)" name="info" required />
             </div>
-            <div class="input-box">
-                <label>Number of attendees allowed</label>
-                <input type="number" placeholder="Enter number of attendes allowed" name="attendees" required />
-            </div>
-
+    
             <div class="column">
-
                 <div class="input-box">
-                    <label>Price</label>
-                    <input type="number" placeholder="Enter price" name="price" required />
+                    <label>Event Place (Venue)</label>
+                    <input type="text" placeholder="Enter event place" name="venue" required />
                 </div>
-
+    
                 <div class="input-box">
-                    <label>Date of event</label>
+                    <label>Date of Event</label>
                     <input type="date" placeholder="Enter date of event" name="date" required />
                 </div>
-
-
-
             </div>
+    
+            <div class="column">
+                <div class="input-box">
+                    <label>Grade 1 Price</label>
+                    <input type="number" step="0.01" placeholder="Enter Grade 1 price" name="grade1_price" required />
+                </div>
+    
+                <div class="input-box">
+                    <label>Grade 2 Price</label>
+                    <input type="number" step="0.01" placeholder="Enter Grade 2 price" name="grade2_price" required />
+                </div>
+    
+                <div class="input-box">
+                    <label>Grade 3 Price</label>
+                    <input type="number" step="0.01" placeholder="Enter Grade 3 price" name="grade3_price" required />
+                </div>
+            </div>
+    
             <div class="input-box">
-                <label>Description of event</label>
-                <input type="text" placeholder="Enter Description of event" name="description" required />
+                <label>Description of Event</label>
+                <textarea placeholder="Enter Description of event" name="description" required></textarea>
             </div>
-            <button>Submit</button>
+    
+            <div class="input-box">
+                <label>Event URL</label>
+                <input type="url" placeholder="Enter event URL" name="url" required />
+            </div>
+    
+            <button type="submit">Submit</button>
         </form>
     </section>
+    
 
 
        <!-- JavaScript Libraries -->

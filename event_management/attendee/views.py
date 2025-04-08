@@ -22,6 +22,39 @@ def eventdetailPage(request, event_id):
 
     return render(request, 'eventdetail.html')
 
+@csrf_exempt
+def eventrequest(request):
+    if request.method == 'POST':
+        # Extracting the form data from the POST request
+        name = request.POST.get('name')
+        info = request.POST.get('info')
+        venue = request.POST.get('venue')
+        date = request.POST.get('date')
+        grade1_price = float(request.POST.get('grade1_price'))
+        grade2_price = float(request.POST.get('grade2_price'))
+        grade3_price = float(request.POST.get('grade3_price'))
+        description = request.POST.get('description')
+        url = request.POST.get('url')
+
+        # Create a new RequestedEvent instance and save the data to the database
+        requested_event = RequestedEvent(
+            name=name,
+            info=info,
+            venue=venue,
+            date=date,
+            grade1_price=grade1_price,
+            grade2_price=grade2_price,
+            grade3_price=grade3_price,
+            description=description,
+            url=url
+        )
+
+        requested_event.save()
+
+        # Optionally, send a success response back to the frontend
+        return JsonResponse({'success': True, 'message': 'Event request submitted successfully'})
+
+
 def hosteventPage(request):
     context = {
         "events": []

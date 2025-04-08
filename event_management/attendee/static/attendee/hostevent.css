@@ -67,6 +67,18 @@ section.navbar .form{
     border-radius: 6px;
     padding: 0 15px;
 }
+.form .input-box textarea{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #004D4D;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
 .form .column{
     display: flex;
     column-gap: 15px;

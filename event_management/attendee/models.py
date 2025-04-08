@@ -17,3 +17,17 @@ class Event(models.Model):
 class attendee(models.Model):
     userid=models.ForeignKey(to=User,on_delete=models.CASCADE)
     event=models.ManyToManyField(to=Event,related_name="attendees")
+
+class RequestedEvent(models.Model):
+    name = models.CharField(max_length=50)
+    info = models.CharField(max_length=255)
+    venue = models.CharField(max_length=255)
+    date = models.DateField()
+    grade1_price = models.FloatField()
+    grade2_price = models.FloatField()
+    grade3_price = models.FloatField()
+    description = models.TextField()
+    url = models.URLField()
+
+    def __str__(self):
+        return self.name

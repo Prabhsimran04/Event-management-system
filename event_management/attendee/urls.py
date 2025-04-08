@@ -9,6 +9,7 @@ urlpatterns = [
     path("event", views.eventPage, name="eventPage"),
     path("eventdetail/<str:event_id>", views.eventdetailPage, name="event_detail"),
     path("hostevent", views.hosteventPage, name="hostEvent"),
+    path("api/eventrequest", views.eventrequest, name="eventrequest"),
     path("dashboard", views.dashboardPage, name="hostDashboard"),
     path("viewattendees", views.viewattendeesPage, name="view_attendees"),
     path("dashboard_events", views.dashboard_eventsPage, name="dashboard_events"),

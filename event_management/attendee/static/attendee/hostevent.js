@@ -116,42 +116,47 @@ jQuery(document).ready(function($) {
     // });
     const hostEventForm = document.getElementById('host_event_form');
     hostEventForm.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
-
-      
-      let data = {
-          event_name: document.querySelector('[name=event_name]').value,
-          event_place: document.querySelector('[name=event_place]').value,
-          attendees: document.querySelector('[name=attendees]').value,
-          price: document.querySelector('[name=price]').value,
-          date: document.querySelector('[name=date]').value,
-          discription: document.querySelector('[name=discription]').value,
-          
-      }
-
-      // console.log(JSON.stringify(data))
-      console.log(data)
-
-      // fetch('http://127.0.0.1:8000/api/register', {
-      //     method: 'POST',
-      //     body: JSON.stringify(data),
-      // })
-      // .then(response => response.json())
-      // .then(data => {
-      //     if (data.success) {
-      //         alert('Registration successful! You can now log in.');
-      //         window.location.replace('/event');
-      //         // Optionally redirect to login page or clear the form
-      //     } else {
-      //         alert('Registration failed: ' + data.message);
-      //     }
-      // })
-      // .catch(error => {
-      //     console.error('Error:', error);
-      // });
-
-      console.log("akldjflksajdf")
-  });
+        event.preventDefault(); // Prevent default form submission
+    
+        // Collecting the values from the form
+        let data = {
+            name: document.querySelector('[name=name]').value,
+            info: document.querySelector('[name=info]').value,
+            venue: document.querySelector('[name=venue]').value,
+            date: document.querySelector('[name=date]').value,
+            grade1_price: parseFloat(document.querySelector('[name=grade1_price]').value),
+            grade2_price: parseFloat(document.querySelector('[name=grade2_price]').value),
+            grade3_price: parseFloat(document.querySelector('[name=grade3_price]').value),
+            description: document.querySelector('[name=description]').value,
+            url: document.querySelector('[name=url]').value
+        }
+    
+        // Logging the data to check if everything is correct
+        console.log(data);
+    
+        // Sending the data to the server using Fetch API
+        fetch('http://127.0.0.1:8000/api/eventrequest', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data), // Sending the data as JSON
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Event created successfully!');
+                window.location.replace('/event'); // Redirecting to the event page or another page after success
+            } else {
+                alert('Event creation failed: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form. Please try again.');
+        });
+    });
+    
   
   });
   
