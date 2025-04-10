@@ -26,15 +26,16 @@ def eventdetailPage(request, event_id):
 def eventrequest(request):
     if request.method == 'POST':
         # Extracting the form data from the POST request
-        name = request.POST.get('name')
-        info = request.POST.get('info')
-        venue = request.POST.get('venue')
-        date = request.POST.get('date')
-        grade1_price = float(request.POST.get('grade1_price'))
-        grade2_price = float(request.POST.get('grade2_price'))
-        grade3_price = float(request.POST.get('grade3_price'))
-        description = request.POST.get('description')
-        url = request.POST.get('url')
+        data = json.loads(request.body)
+        name = data.get('name')
+        info = data.get('info')
+        venue = data.get('venue')
+        date = data.get('date')
+        grade1_price = float(data.get('grade1_price'))
+        grade2_price = float(data.get('grade2_price'))
+        grade3_price = float(data.get('grade3_price'))
+        description = data.get('description')
+        url = data.get('url')
 
         # Create a new RequestedEvent instance and save the data to the database
         requested_event = RequestedEvent(
@@ -69,6 +70,7 @@ def dashboardPage(request):
     return render(request, 'dashboard.html')
 
 def viewattendeesPage(request):
+    attendee.objects.filter(userId=request.user)
     return render(request, 'viewattendees.html')
 
 def dashboard_userPage(request):
