@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from .models import *  
 from django.shortcuts import redirect
@@ -56,6 +57,7 @@ def eventrequest(request):
         return JsonResponse({'success': True, 'message': 'Event request submitted successfully'})
 
 
+@login_required
 def hosteventPage(request):
     context = {
         "events": []
@@ -66,13 +68,19 @@ def hosteventPage(request):
         return render(request, 'hostevent.html', context)
     return render(request, 'hostevent.html')
 
-def dashboardPage(request):
+
+@login_required
+def dashboardPage(request): 
     return render(request, 'dashboard.html')
 
+@login_required
 def viewattendeesPage(request):
-    attendee.objects.filter(userId=request.user)
-    return render(request, 'viewattendees.html')
+   print(request.user)
+   print(attendee.objects.filter(userid_id=request.user.id))
+   return render(request, 'viewattendees.html')
 
+
+@login_required
 def dashboard_userPage(request):
     if not request.user.is_authenticated:
         return redirect('landingPage')
@@ -85,6 +93,7 @@ def dashboard_userPage(request):
     return render(request, 'dashboard_user.html', context)
 
 
+@login_required
 def dashboard_eventsPage(request):
     if not request.user.is_authenticated:
         redirect('landingPage')
@@ -139,8 +148,9 @@ def login_view(request):
     return JsonResponse({'success': False, 'message': 'Invalid request method.'})
 
 def eventPage(request):
+    print(request.user.is_authenticated)
     if request.user.is_authenticated:
-        redirect('/dashboard_events')
+       return redirect('/dashboard_events')
     context = {
         "events": []
     }
