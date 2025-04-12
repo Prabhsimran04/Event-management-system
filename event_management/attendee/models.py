@@ -31,3 +31,13 @@ class RequestedEvent(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    number = models.CharField(max_length=15)  # Use CharField to allow leading zeroes or symbols
+    date = models.DateField()
+
+    def __str__(self):
+        return f"Appointment for {self.name} on {self.date}"

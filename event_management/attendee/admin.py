@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(Event)
 admin.site.register(attendee)
 admin.site.register(RequestedEvent)
+admin.site.register(Appointment)
