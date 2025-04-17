@@ -14,59 +14,14 @@
 
 <body>
     <div class="container">
-        <div class="topbar">
-            <div class="logo">
-                <h2>Brand.</h2>
-            </div>
-            <div class="search">
-                <input type="text" id="search" placeholder="search here">
-                <label for="search"> <i class="fas fa-search"></i></label>
-            </div>
-            <i class="fas fa-bell"></i>
-            <div class="user">
-                <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740"
-                    alt="">
-            </div>
-        </div>
-        <div class="sidebar">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-th-large"></i>
-                        <div>Dashboard</div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user-graduate"></i>
-                        <div>Events</div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{% url "view_attendees" %}">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <div>View Attendees</div>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-                        <i class="fas fa-cog"></i>
-                        <div>Settings</div>
-                    </a>
-                </li>
-
+        {% include "components/dashboard_topbar.html" %}
+        {% include "components/dashboard_sidebar.html" %}
               
-            </ul>
-        </div>
         <div class="main">
             <div class="cards">
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">12</div>
+                        <div class="number">{{ total_events }}</div>
                         <div class="card-name">Events</div>
                     </div>
                     <div class="icon-box">
@@ -96,8 +51,8 @@
 
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">Rs.45000</div>
-                        <div class="card-name">Earnings</div>
+                        <div class="number">Rs. {{ total_spending }}</div>
+                        <div class="card-name">Total Spending</div>
                     </div>
                     <div class="icon-box">
                         <i class="fas fa-indian-rupee-sign"></i>
@@ -106,18 +61,34 @@
             </div>
             <div class="charts">
                 <div class="chart">
-                    <h2>Earnings (past 12 months)</h2>
+                    <h2>Your Bookings (past 12 months)</h2>
                     <canvas id="linechart"></canvas>
                 </div>
                 <div class="chart" id="doughnut-chart">
-                    <h2>Employees</h2>
+                    <h2>Ticket Price</h2>
                     <canvas id="doughnut"></canvas>
                 </div>
             </div>
         </div>
     </div>
+
+    {{ pie_chart_data|json_script:"pie-data" }}
+    <script> 
+        const booking_data = {{ monthly_bookings.data }}
+        let chartData = JSON.parse(document.getElementById('pie-data').textContent);
+         chartData = JSON.parse(chartData)
+        {% comment %} const chartLabels = JSON.parse(document.getElementById('pie-labels').textContent); {% endcomment %}
+        {% comment %} const pie_labels = chartData.labels;
+        const pie_data = chartData.data; {% endcomment %}
+        {% comment %} console.log(document.getElementById('pie-data').textContent) {% endcomment %}
+        console.log(document.getElementById('pie-data').textContent)
+        console.log(chartData)
+        console.log(typeof(chartData))
+        {% comment %} console.log(chartLabels) {% endcomment %}
+        
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script> 
-    <script src="{% static 'attendee/dashboard.js'%}"></script>
+    <script src="{% static 'attendee/dashboard.js' %}"></script>
 </body>
 
 </html>

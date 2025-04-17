@@ -12,20 +12,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="topbar">
-          <div class="logo">
-            <h2>Brand.</h2>
-          </div>
-          <div class="search">
-            <input type="text" id="search" placeholder="search here">
-            <label for="search"> <i class="fas fa-search"></i></label>
-          </div>
-          <i class="fas fa-bell"></i>
-          <div class="user">
-            <img
-              src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1741252154~exp=1741255754~hmac=470da8d9379ed74e0f5807ed80cca7a203983fdcf9ae95b5a4ddedd01e560d91&w=740"
-              alt="">
-          </div>
+      {% include "components/dashboard_topbar.html" %}
+      {% include "components/dashboard_sidebar.html" %}
         </div>
     
          {% comment %} <div class="sidebar"> 

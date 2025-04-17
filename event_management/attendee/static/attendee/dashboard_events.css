@@ -246,6 +246,14 @@
     letter-spacing: 2px;
     transition: background-color 0.4s, top 0.4s;
 }
+.action a {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 12px;
+}
 
 .item-container:hover .action{
     top: 15px;

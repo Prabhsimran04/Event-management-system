@@ -32,8 +32,8 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">The Live<br><span>Musical</span> Event </h1>
-      <p class="mb-4 pb-0">24 june, Guru Nanak Dev University,Amritsar</p>
+      <h1 class="mb-4 pb-0"><span>{{ event.name }}</span> </h1>
+      <p class="mb-4 pb-0">{{ event.date|date:"l" }} {{ event.date|date:"F d" }}, {{ event.venue }}</p>
       <a href="https://www.youtube.com/watch?v=dP9sKoQhdgE"  class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
       <a href="#about" class="about-btn scrollto">About The Event</a>
@@ -50,15 +50,15 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>About The Event</h2>
-            <p>Musicals are a captivating blend of acting, singing, and dancing that originated in ancient Greece. They take years to develop and involve meticulous rehearsals, stunning costumes, and live orchestras.</p>
+            <p>{{ event.description }}</p>
           </div>
           <div class="col-lg-3">
             <h3>Where</h3>
-            <p>Guru Nanak Dev University,Amritsar</p>
+            <p>{{ event.venue }}</p>
           </div>
           <div class="col-lg-3">
             <h3>When</h3>
-            <p>Monday<br>june 24</p>
+            <p>{{ event.date|date:"l" }}<br>{{ event.date|date:"F d" }}</p>
           </div>
         </div>
       </div>
@@ -220,8 +220,8 @@
           <div class="col-lg-6 venue-info">
             <div class="row justify-content-center">
               <div class="col-11 col-lg-8">
-                <h3>Guru Nanak Dev University, Amritsar</h3>
-                <p>Guru Nanak Dev University, established in 1969, blends academic excellence with Guru Nanak’s teachings, focusing on diverse disciplines and fostering research. It has earned top rankings, including an "A++" NAAC accreditation and recognition as a "University with Potential for Excellence." The university excels in sports, infrastructure, and community engagement, offering skill development and contributing to both national and international advancements in various fields.</p>
+                <h3>{{ event.venue }}</h3>
+                <p>{{ event.description }}</p>
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@
                 <a data-toggle="collapse" class="collapsed" href="#faq1">What is the date and time of the event? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq1" class="collapse" data-parent="#faq-list">
                   <p>
-                    The event will take place on Monday, june 24, 2023, from 2:00 PM to 9:00 PM.
+                    The event will take place on {{ event.date|date:"l" }} {{ event.date|date:"F d" }}, from 2:00 PM to 9:00 PM.
                   </p>
                 </div>
               </li>
@@ -284,7 +284,7 @@
                 <a data-toggle="collapse" href="#faq2" class="collapsed">Where is the event being held? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq2" class="collapse" data-parent="#faq-list">
                   <p>
-                    The event will be held at Guru Nanak Dev University,Amritsar.
+                    The event will be held at {{ event.venue }}.
                   </p>
                 </div>
               </li>
@@ -361,7 +361,7 @@
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-                <h6 class="card-price text-center">Rs.350</h6>
+                <h6 class="card-price text-center">Rs.{{ event.grade1_price }}</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -373,7 +373,22 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                 
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access"
+                  {% if already_booked  %}
+                  disabled
+                  {% elif event_date_passed %}
+                  disabled
+                  {% endif %}
+                  >{% if booked_grade == 1 %}Already Booked{% else %}Buy Now{% endif %}</button>
+
+                  {% if already_booked and booked_grade == 1 %}
+                  <div class="text-center mt-2">
+                    <button class="btn btn-danger cancel-booking-btn" data-event-id="{{ event.id }}">
+                      Cancel Booking
+                    </button>
+                  </div>
+                  {% endif %}
                 </div>
               </div>
             </div>
@@ -382,7 +397,7 @@
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-                <h6 class="card-price text-center">Rs.500</h6>
+                <h6 class="card-price text-center">Rs.{{ event.grade2_price }}</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -394,7 +409,21 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access"
+                  {% if already_booked  %}
+                    disabled
+                    {% elif event_date_passed %}
+                    disabled
+                    {% endif %}
+                  >{% if booked_grade == 2 %}Already Booked{% else %}Buy Now{% endif %}
+                  </button>
+                  {% if already_booked and booked_grade == 2 %}
+                    <div class="text-center mt-2">
+                      <button class="btn btn-danger cancel-booking-btn" data-event-id="{{ event.id }}">
+                        Cancel Booking
+                      </button>
+                    </div>
+                    {% endif %}
                 </div>
               </div>
             </div>
@@ -404,7 +433,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-                <h6 class="card-price text-center">Rs.800</h6>
+                <h6 class="card-price text-center">Rs.{{ event.grade3_price }}</h6>
                 <hr>
                 <ul class="fa-ul">
                   <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
@@ -416,7 +445,20 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access"
+                  {% if already_booked %}
+                    disabled
+                    {% elif event_date_passed %}
+                    disabled
+                    {% endif %}
+                  >{% if booked_grade == 3 %}Already Booked{% else %}Buy Now{% endif %}</button>
+                  {% if already_booked and booked_grade == 3 %}
+                    <div class="text-center mt-2">
+                      <button class="btn btn-danger cancel-booking-btn" data-event-id="{{ event.id }}">
+                        Cancel Booking
+                      </button>
+                    </div>
+                    {% endif %}
                 </div>
 
               </div>
@@ -438,6 +480,11 @@
             </div>
             <div class="modal-body">
               <form method="POST" action="#">
+                {% csrf_token %}
+                
+                <!-- Hidden input for event ID -->
+                <input type="hidden" name="event_id" value="{{ event.id }}" />
+                
                 <div class="form-group">
                   <input type="text" class="form-control" name="your-name" placeholder="Your Name">
                 </div>
@@ -481,7 +528,7 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Address</h3>
-              <address>Guru Nanak Dev University,Amritsar</address>
+              <address>{{ event.venue }}</address>
             </div>
           </div>
 
@@ -538,6 +585,9 @@
 
 
 
+  <script>
+    eventId = "{{ event.id }}"
+  </script>
 
 
     <!-- JavaScript Libraries -->

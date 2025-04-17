@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'attendee\dashboard.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        {% include "components/dashboard_topbar.html" %}
+        {% include "components/dashboard_sidebar.html" %}
+
+        <div class="main">
+            <div class="settings-section"
+                style="padding: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                <div class="card"
+                    style="background: white; border-radius: 15px; padding: 30px 50px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center;">
+                    <h2 style="margin-bottom: 20px; color: #381cd4;">Account Settings</h2>
+                    <p style="color: #555; font-size: 16px;">Manage your account settings and preferences here.</p>
+                    <button id="logoutBtn" style="
+                    margin-top: 30px;
+                    padding: 12px 25px;
+                    font-size: 16px;
+                    color: white;
+                    background-color: #dc3545;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+                ">
+                        <i class="fas fa-sign-out-alt" style="margin-right: 8px;"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("logoutBtn").addEventListener("click", function () {
+                if (confirm("Are you sure you want to logout?")) {
+                    fetch("{% url 'logout' %}", {
+                        method: "POST",
+                        headers: {
+                            "X-CSRFToken": "{{ csrf_token }}",
+                            "Content-Type": "application/json",
+                        },
+                    })
+                        .then(response => {
+                            if (response.redirected) {
+                                window.location.href = response.url;
+                            } else {
+                                window.location.href = "{% url 'landingPage' %}";
+                            }
+                        })
+                        .catch(error => {
+                            alert("Logout failed. Please try again.");
+                            console.error("Logout error:", error);
+                        });
+                }
+            });
+        </script>
+
+
+
+
+</body>
+
+</html>

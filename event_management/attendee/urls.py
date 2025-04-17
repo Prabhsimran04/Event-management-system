@@ -1,4 +1,5 @@
 from django.urls import path
+from django.contrib.auth.views import LogoutView
 from . import views
 
 urlpatterns = [
@@ -11,7 +12,14 @@ urlpatterns = [
     path("hostevent", views.hosteventPage, name="hostEvent"),
     path("api/eventrequest", views.eventrequest, name="eventrequest"),
     path("dashboard", views.dashboardPage, name="hostDashboard"),
-    path("viewattendees", views.viewattendeesPage, name="view_attendees"),
+    # path("viewattendees", views.viewattendeesPage, name="view_attendees"),
     path("dashboard_events", views.dashboard_eventsPage, name="dashboard_events"),
     path("dashboard_user", views.dashboard_userPage, name="dashboard_user"),
+    path('book-appointment/', views.book_appointment, name='book_appointment'),
+    path("eventdetail/submit-contact/", views.submit_contact, name="submit_contact"),
+    path("book-ticket", views.book_ticket, name="book_ticket"),
+    path('cancel-booking/', views.cancel_booking, name='cancel_booking'),
+    path('view-tickets/', views.viewTicketsPage, name='view_tickets'),
+    path('settings/', views.dashboard_settings, name='settings'),
+    path('logout/', LogoutView.as_view(next_page='landingPage'), name='logout'),
 ]

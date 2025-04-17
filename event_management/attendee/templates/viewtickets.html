@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'attendee\viewattendees.css' %}">
+    <link rel="stylesheet" href="{% static 'attendee\viewtickets.css' %}">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
             <div class="cards">
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">12</div>
+                        <div class="number">{{ total_events }}</div>
                         <div class="card-name">Events</div>
                     </div>
                     <div class="icon-box">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                {% comment %} <div class="card">
                     <div class="card-content">
                         <div class="number">600</div>
                         <div class="card-name">Attendees</div>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                {% comment %} <div class="card">
+                 <div class="card">
                     <div class="card-content">
                         <div class="number">68</div>
                         <div class="card-name">Employees</div>
@@ -45,7 +45,7 @@
                     <div class="icon-box">
                         <i class="fas fa-users"></i>
                     </div>
-                </div> {% endcomment %}
+                </div> 
 
                 <div class="card">
                     <div class="card-content">
@@ -55,7 +55,7 @@
                     <div class="icon-box">
                         <i class="fas fa-indian-rupee-sign"></i>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
 
             <div class="details">
@@ -68,89 +68,33 @@
                     <table>
                         <thead>
                             <tr>
-                                <td>Name</td>
-                                <td>Price</td>
-                                <td>Attendees</td>
-                                <td>Info</td>
+                                <th>Ticket ID</th>
+                                <th>Event Name</th>
+                                <th>Ticket Grade</th>
+                                <th>Price</th>
+                                <th>Event Date</th>
                             </tr>
                         </thead>
-
                         <tbody>
+                            {% for ticket in tickets %}
                             <tr>
-                                <td>Musical Concert</td>
-                                <td>Rs.500</td>
-                                <td>8000</td>
-                                <td><span class="event info">Live Concert</span></td>
+                                <td>{{ ticket.ticket_id }}</td>
+                                <td>{{ ticket.event_name }}</td>
+                                <td>{{ ticket.ticket_type }}</td>
+                                <td>Rs.{{ ticket.ticket_price }}</td>
+                                <td>{{ ticket.event_date }}</td>
                             </tr>
-                        </tbody>
-
-                        <tbody>
+                            {% empty %}
                             <tr>
-                                <td>Carnival</td>
-                                <td>Rs.350</td>
-                                <td>3000</td>
-                                <td><span class="Event info">Fun Fair</span></td>
+                                <td colspan="5">You have not booked any tickets yet.</td>
                             </tr>
+                            {% endfor %}
                         </tbody>
-
-                        <tbody>
-                            <tr>
-                                <td> National Book Fair</td>
-                                <td>Free</td>
-                                <td>2000</td>
-                                <td><span class="Event info">Book Fair</span></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody>
-                            <tr>
-                                <td>Charity event</td>
-                                <td>Free</td>
-                                <td>11000</td>
-                                <td><span class="Event info">Humanism</span></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody>
-                            <tr>
-                                <td>Art exhibitions</td>
-                                <td>Rs.200</td>
-                                <td>4000</td>
-                                <td><span class="Event info">Art Gallery</span></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody>
-                            <tr>
-                                <td>Comedy Show</td>
-                                <td>Rs.600</td>
-                                <td>4000</td>
-                                <td><span class="Event info">Standup Comedy</span></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody>
-                            <tr>
-                                <td>Magic Show</td>
-                                <td>Rs.200</td>
-                                <td>4500</td>
-                                <td><span class="Event info">Circus Routine</span></td>
-                            </tr>
-                        </tbody>
-
-                        <tbody>
-                            <tr>
-                                <td>Poetry Slams</td>
-                                <td>Rs.750</td>
-                                <td>2500</td>
-                                <td><span class="Event info">Spoken Word Poetry</span></td>
-                            </tr>
-                        </tbody>
-                        
                     </table>
+                    
                 </div>
 
-                <div class="recentevents">
+                {% comment %} <div class="recentevents">
                     <div class="cardHeader">
                         <h2>Attendees of Event 1</h2> 
                     </div>
@@ -230,7 +174,7 @@
 
 
                     </table>
-                </div>
+                </div> {% endcomment %}
 
             </div>
         </div>

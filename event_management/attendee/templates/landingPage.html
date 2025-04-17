@@ -1,446 +1,633 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Swiper Js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+      integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!--link font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
     <!-- link style css -->
-    <link rel="stylesheet" href="{% static 'attendee\style.css' %}">
+    <link rel="stylesheet" href="{% static 'attendee\style.css' %}" />
     <title>Event management</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Header/Navbar Start-->
     <div class="header">
-        <a href="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" class="logo">
-            <img src="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" alt="">
-        </a>
+      <a
+        href="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain"
+        class="logo"
+      >
+        <img
+          src="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain"
+          alt=""
+        />
+      </a>
 
-        <nav class="navbar">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Services">Services</a>
-            <a href="#Gallery">Gallery</a>
-            <a href="#Review">Review</a>
-            <a href="#Contact">Contact</a>
-            <a href="register">Register</a>
-            <a href="event">Event</a>
-            <a href="hostevent">HostEvent</a>
-            <a href="dashboard">Dashboard</a>
-            <a href="viewattendees">Viewattendees</a>
-            <a href="dashboard_events">Dashboard_Events</a>
-            <a href="dashboard_user">Dashboard_user</a>
-        </nav>
-        <div class="fas fa-bars" id="MenuBtn"></div>
+      <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Gallery">Gallery</a>
+        <a href="#Review">Review</a>
+        <a href="#Contact">Contact</a>
+        <a href="register">Register</a>
+        <a href="event">Events</a>
+        <a href="hostevent">HostEvent</a>
+        <a href="dashboard">Dashboard</a>
+        <a href="viewattendees">Viewattendees</a>
+        <a href="dashboard_events">Dashboard_Events</a>
+        <a href="dashboard_user">Dashboard_user</a>
+      </nav>
+      <div class="fas fa-bars" id="MenuBtn"></div>
     </div>
     <!-- Header/Navbar End-->
 
     <!-- Home Section Start-->
     <section id="Home" class="home">
-
-        <div class="content">
-            <h3>When Nothing Goes Right, Go Left.</h3>
-            <p>Let us take the stress out of your event planning. With our experience and attention to detail, you can focus on what truly matters—enjoying your event and making lasting memories with your guests.</p>
-        </div>
-
+      <div class="content">
+        <h3>When Nothing Goes Right, Go Left.</h3>
+        <p>
+          Let us take the stress out of your event planning. With our experience
+          and attention to detail, you can focus on what truly matters—enjoying
+          your event and making lasting memories with your guests.
+        </p>
+      </div>
     </section>
     <!--Home Section End-->
 
     <!-- About Us Section Start -->
     <section id="About" class="about">
-        <h1 class="heading"><span>ABOUT</span>US</h1>
+      <h1 class="heading"><span>ABOUT</span>US</h1>
 
-        <div class="row">
-
-            <div class="img">
-                <img src="https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="">
-            </div>
-
-            <div class="content">
-                <h3>We Will Give A Very Special Celebration For You</h3>
-                <p>we believe that every celebration deserves to be extraordinary. Whether it’s a wedding, milestone birthday, corporate event, or any special occasion, we are dedicated to crafting an unforgettable experience tailored to your unique vision..<br><br>Let us transform your ideas into reality and create a celebration that you and your guests will cherish forever. With our commitment to excellence, your special day will be nothing short of magical.</p>
-            </div>
+      <div class="row">
+        <div class="img">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg"
+            alt=""
+          />
         </div>
+
+        <div class="content">
+          <h3>We Will Give A Very Special Celebration For You</h3>
+          <p>
+            we believe that every celebration deserves to be extraordinary.
+            Whether it’s a wedding, milestone birthday, corporate event, or any
+            special occasion, we are dedicated to crafting an unforgettable
+            experience tailored to your unique vision..<br /><br />Let us
+            transform your ideas into reality and create a celebration that you
+            and your guests will cherish forever. With our commitment to
+            excellence, your special day will be nothing short of magical.
+          </p>
+        </div>
+      </div>
     </section>
     <!-- About Us Section End -->
 
     <!-- Services Section Start -->
     <section id="Services" class="services">
+      <h3 class="heading"><span>OUR</span>SERVICES</h3>
 
-        <h3 class="heading"><span>OUR</span>SERVICES</h3>
-
-        <div class="boxContainer">
-
-            <div class="box">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Venue Selection</h3>
-                <p>we understand that the right venue can make all the difference in creating a memorable event. Our expert team is dedicated to helping you find the ideal location that aligns with your vision and meets your needs.</p>
-            </div>
-
-
-            <div class="box">
-                <i class="fas fa-envelope"></i>
-                <h3>Invitation Card</h3>
-                <p>Prepare for an unforgettable experience filled with joy, laughter, and cherished memories. Your presence will make this occasion even more special!</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-music"></i>
-                <h3>Entertainment</h3>
-                <p>we believe that entertainment is the heartbeat of any successful event. It has the power to engage guests, create lasting memories, and set the tone for an unforgettable experience.</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-utensils"></i>
-                <h3>Food and Drinks</h3>
-                <p> we understand that exceptional food and drinks are essential to creating a memorable event. Our culinary team is dedicated to providing a delightful dining experience that caters to your guests' tastes and preferences.</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-photo-video"></i>
-                <h3>Photos and Videos</h3>
-                <p>we believe that every event is a collection of precious moments that deserve to be beautifully captured. Our professional photography and videography services are designed to document your special day, allowing you to relive the memories for years to come.</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-birthday-cake"></i>
-                <h3>Custom Food</h3>
-                <p>we understand that food is a vital part of any event, and we are committed to creating a custom culinary experience that reflects your unique tastes and preferences.</p>
-            </div>
-
+      <div class="boxContainer">
+        <div class="box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Venue Selection</h3>
+          <p>
+            we understand that the right venue can make all the difference in
+            creating a memorable event. Our expert team is dedicated to helping
+            you find the ideal location that aligns with your vision and meets
+            your needs.
+          </p>
         </div>
+
+        <div class="box">
+          <i class="fas fa-envelope"></i>
+          <h3>Invitation Card</h3>
+          <p>
+            Prepare for an unforgettable experience filled with joy, laughter,
+            and cherished memories. Your presence will make this occasion even
+            more special!
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-music"></i>
+          <h3>Entertainment</h3>
+          <p>
+            we believe that entertainment is the heartbeat of any successful
+            event. It has the power to engage guests, create lasting memories,
+            and set the tone for an unforgettable experience.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-utensils"></i>
+          <h3>Food and Drinks</h3>
+          <p>
+            we understand that exceptional food and drinks are essential to
+            creating a memorable event. Our culinary team is dedicated to
+            providing a delightful dining experience that caters to your guests'
+            tastes and preferences.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-photo-video"></i>
+          <h3>Photos and Videos</h3>
+          <p>
+            we believe that every event is a collection of precious moments that
+            deserve to be beautifully captured. Our professional photography and
+            videography services are designed to document your special day,
+            allowing you to relive the memories for years to come.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Custom Food</h3>
+          <p>
+            we understand that food is a vital part of any event, and we are
+            committed to creating a custom culinary experience that reflects
+            your unique tastes and preferences.
+          </p>
+        </div>
+      </div>
     </section>
     <!-- Services Section End -->
 
     <!-- Gallery Section Start -->
     <section id="Gallery" class="gallery">
-        <h1 class="heading"><span>OUR</span>GALLERY</h1>
-        <div class="boxContainer">
-
-            <div class="box">
-                <img src="https://www.totbarcelona.cat/app/uploads/sites/11/2022/08/favsu7ywiamypvk.jpeg" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
+      <h1 class="heading"><span>OUR</span>GALLERY</h1>
+      <div class="boxContainer">
+        <div class="box">
+          <img
+            src="https://www.totbarcelona.cat/app/uploads/sites/11/2022/08/favsu7ywiamypvk.jpeg"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
         </div>
 
         <div class="box">
-            <img src="https://ts3.mm.bing.net/th?id=OIP.lNOW4jXnNXVTdJwBBYVT2AHaE8&pid=15.1" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
+          <img
+            src="https://ts3.mm.bing.net/th?id=OIP.lNOW4jXnNXVTdJwBBYVT2AHaE8&pid=15.1"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
         </div>
 
         <div class="box">
-            <img src="https://mirageparties.co.uk/wp-content/uploads/2019/05/Essex-Luxury-Marquee-Party.jpg" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
+          <img
+            src="https://mirageparties.co.uk/wp-content/uploads/2019/05/Essex-Luxury-Marquee-Party.jpg"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
         </div>
-        
-        <div class="box">
-            <img src="https://thumbs.dreamstime.com/z/holy-chariot-rolling-down-yonge-street-annual-festival-india-o-rath-yeatra-mayapur-colorful-celebration-127434943.jpg?w=992"
-            alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
-        </div>
-        
-        <div class="box">
-            <img src="https://th.bing.com/th/id/OIP.gufwqRjp93_b9crF1hHOIwHaFi?rs=1&pid=ImgDetMain" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
-        </div>
-        <div class="box">
-            <img src="https://th.bing.com/th/id/R.6eb8d6065e98d4bbe04aa772948cb305?rik=kPfH1h1wju5BMA&riu=http%3a%2f%2fwww.thatballoons.com%2fwp-content%2fuploads%2f2013%2f10%2fFlowers-and-Rainbow-Balloon-Arch.jpg&ehk=Tv%2fLvjAV7y9BQDhGXQOLxlPFro8mjejh5LaIjYfBwM8%3d&risl=&pid=ImgRaw&r=0" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
-        </div>    
 
         <div class="box">
-            <img src="https://th.bing.com/th/id/OIP.bvbrxGMhofGXmo2-RZHrfwAAAA?rs=1&pid=ImgDetMain" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
-        </div>    
+          <img
+            src="https://thumbs.dreamstime.com/z/holy-chariot-rolling-down-yonge-street-annual-festival-india-o-rath-yeatra-mayapur-colorful-celebration-127434943.jpg?w=992"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
+        </div>
 
         <div class="box">
-            <img src="https://www.royalfalconevents.com/wp-content/uploads/2023/03/Community-Events.png" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
-        </div>    
+          <img
+            src="https://th.bing.com/th/id/OIP.gufwqRjp93_b9crF1hHOIwHaFi?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img
+            src="https://th.bing.com/th/id/R.6eb8d6065e98d4bbe04aa772948cb305?rik=kPfH1h1wju5BMA&riu=http%3a%2f%2fwww.thatballoons.com%2fwp-content%2fuploads%2f2013%2f10%2fFlowers-and-Rainbow-Balloon-Arch.jpg&ehk=Tv%2fLvjAV7y9BQDhGXQOLxlPFro8mjejh5LaIjYfBwM8%3d&risl=&pid=ImgRaw&r=0"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
+        </div>
 
         <div class="box">
-            <img src="https://i.pinimg.com/originals/b7/7c/a7/b77ca7d7becfc60ce8ff13da86336152.jpg" alt="">
-            <h3>Photos And Events</h3>
-            <div class="icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-share"></i>
-                <i class="fas fa-eye"></i>
-            </div>
-        </div>    
-    </div>
+          <img
+            src="https://th.bing.com/th/id/OIP.bvbrxGMhofGXmo2-RZHrfwAAAA?rs=1&pid=ImgDetMain"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            src="https://www.royalfalconevents.com/wp-content/uploads/2023/03/Community-Events.png"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            src="https://i.pinimg.com/originals/b7/7c/a7/b77ca7d7becfc60ce8ff13da86336152.jpg"
+            alt=""
+          />
+          <h3>Photos And Events</h3>
+          <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share"></i>
+            <i class="fas fa-eye"></i>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Gallery Section End-->
 
     <!-- Review Section Start -->
-     <section id="Review" class="review">
-        <h1 class="heading">Client's<span>Review</span></h1>
+    <section id="Review" class="review">
+      <h1 class="heading">Client's<span>Review</span></h1>
 
-        <div class="ReviewSlider swiper=swiper-container">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-33498,resizemode-75,msid-103135746/news/company/corporate-trends/ril-agm-2023-mukesh-ambani-to-remain-chairman-md-of-the-company-for-next-five-years.jpg" alt="">
-                        <div class="UserInfo">
-                            <h3>Mukesh Ambani</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>On the day of the event, everything was executed flawlessly. The decorations were stunning, and the setup was exactly what we envisioned.</p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://i.pinimg.com/736x/b3/5f/fe/b35ffe876205d58fd2b22c5effc0e09e.jpg" alt="">
-                        <div class="UserInfo">
-                            <h3>Sonali</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>I had the pleasure of attending a musical event , and it was nothing short of spectacular! From the moment I arrived, the atmosphere was electric, filled with excitement and anticipation.</p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://th.bing.com/th/id/OIP.IrUBHhdMo6wWLFueKNreRwHaHa?rs=1&pid=ImgDetMain" alt="">
-                        <div class="UserInfo">
-                            <h3>John Deo</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>The atmosphere was vibrant and welcoming, with plenty of cozy reading nooks and spaces to relax.</p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://i.pinimg.com/originals/b8/64/c4/b864c4ab106ea7470f7f55e6316bf47b.jpg" alt="">
-                        <div class="UserInfo">
-                            <h3>devika</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>The entertainment lineup was also top-notch, featuring live performances that kept the energy high throughout the day. The performers were talented and engaging, adding to the festive spirit of the event.</p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://th.bing.com/th/id/OIP.yLowptOagasaXJkvB7MvRQHaLH?rs=1&pid=ImgDetMain" alt="">
-                        <div class="UserInfo">
-                            <h3>Rohan</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>The organization was impeccable. Check-in was smooth, and the staff were friendly and attentive, ensuring that everyone felt comfortable and had everything they needed.</p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://th.bing.com/th/id/OIP.oa7lMha0uXH9GglNX1cKdAHaFq?rs=1&pid=ImgDetMain" alt="">
-                        <div class="UserInfo">
-                            <h3>Jenifer</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>I had the privilege of attending the  Charity Event, and it was an incredibly moving and inspiring experience.</p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://th.bing.com/th/id/OIP.ES3SiTwuWw-qTjYCSx_wOgHaJP?rs=1&pid=ImgDetMain" alt="">
-                        <div class="UserInfo">
-                            <h3>Veda</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>The atmosphere was vibrant and engaging, with knowledgeable staff on hand to provide insights about the artists and their work. </p>
-                </div>
-
-                <div class="swiper-slide box">
-                    <i class="fas fa-Quote-right"></i>
-                    <div class="user">
-                        <img src="https://i.pinimg.com/originals/87/46/48/8746481b5837f159a7399b3f244b3262.jpg" alt="">
-                        <div class="UserInfo">
-                            <h3>Azaan</h3>
-                            <span>Happy Client</span>
-                        </div>
-                    </div>
-                    <p>The venue was intimate, which added to the overall experience, allowing everyone to feel connected to the performance.</p>
-                </div>
+      <div class="ReviewSlider swiper=swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-33498,resizemode-75,msid-103135746/news/company/corporate-trends/ril-agm-2023-mukesh-ambani-to-remain-chairman-md-of-the-company-for-next-five-years.jpg"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>Mukesh Ambani</h3>
+                <span>Happy Client</span>
+              </div>
             </div>
+            <p>
+              On the day of the event, everything was executed flawlessly. The
+              decorations were stunning, and the setup was exactly what we
+              envisioned.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://i.pinimg.com/736x/b3/5f/fe/b35ffe876205d58fd2b22c5effc0e09e.jpg"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>Sonali</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              I had the pleasure of attending a musical event , and it was
+              nothing short of spectacular! From the moment I arrived, the
+              atmosphere was electric, filled with excitement and anticipation.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://th.bing.com/th/id/OIP.IrUBHhdMo6wWLFueKNreRwHaHa?rs=1&pid=ImgDetMain"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>John Deo</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              The atmosphere was vibrant and welcoming, with plenty of cozy
+              reading nooks and spaces to relax.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://i.pinimg.com/originals/b8/64/c4/b864c4ab106ea7470f7f55e6316bf47b.jpg"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>devika</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              The entertainment lineup was also top-notch, featuring live
+              performances that kept the energy high throughout the day. The
+              performers were talented and engaging, adding to the festive
+              spirit of the event.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://th.bing.com/th/id/OIP.yLowptOagasaXJkvB7MvRQHaLH?rs=1&pid=ImgDetMain"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>Rohan</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              The organization was impeccable. Check-in was smooth, and the
+              staff were friendly and attentive, ensuring that everyone felt
+              comfortable and had everything they needed.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://th.bing.com/th/id/OIP.oa7lMha0uXH9GglNX1cKdAHaFq?rs=1&pid=ImgDetMain"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>Jenifer</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              I had the privilege of attending the Charity Event, and it was an
+              incredibly moving and inspiring experience.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://th.bing.com/th/id/OIP.ES3SiTwuWw-qTjYCSx_wOgHaJP?rs=1&pid=ImgDetMain"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>Veda</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              The atmosphere was vibrant and engaging, with knowledgeable staff
+              on hand to provide insights about the artists and their work.
+            </p>
+          </div>
+
+          <div class="swiper-slide box">
+            <i class="fas fa-Quote-right"></i>
+            <div class="user">
+              <img
+                src="https://i.pinimg.com/originals/87/46/48/8746481b5837f159a7399b3f244b3262.jpg"
+                alt=""
+              />
+              <div class="UserInfo">
+                <h3>Azaan</h3>
+                <span>Happy Client</span>
+              </div>
+            </div>
+            <p>
+              The venue was intimate, which added to the overall experience,
+              allowing everyone to feel connected to the performance.
+            </p>
+          </div>
         </div>
-     </section>
-     <!-- Review Section End -->
+      </div>
+    </section>
+    <!-- Review Section End -->
 
-     <!-- Contact Form Start -->
-      <section id="Contact" class="contact">
-        <h1 class="heading"><span>BOOK</span>NOW</h1>
+    <!-- Contact Form Start -->
+    <section id="Contact" class="contact">
+      <h1 class="heading"><span>BOOK</span>NOW</h1>
 
-        <div class="row">
+      <div class="row">
+        <form id="appointment-form" method="POST">
+          {% csrf_token %}
+          <h1>Book Your Appointment</h1>
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your Name"
+            class="box"
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your Email"
+            class="box"
+          />
+          <input
+            type="text"
+            name="number"
+            required
+            placeholder="Your Number"
+            class="box"
+          />
+          <input type="date" name="date" required class="box" />
+          <button type="submit" class="btn">
+            Submit <span class="fas fa-chevron-right"></span>
+          </button>
+          <p id="success-msg" style="color: green; display: none">
+            Your appointment has been booked!
+          </p>
+        </form>
 
-            <form action="">
-                <h1>Book Your Appointment</h1>
-
-                <input type="text" required placeholder="Your Name" class="box">
-                <input type="email" required placeholder="Your Email" class="box">
-                <input type="number" required placeholder="Your Number" class="box">
-                <input type="date" required class="box">
-                <button class="btn">Submit <span class="fas fa-chevron-right"></span></button>
-            </form>
-
-            <div class="img">
-                <img src="https://i.scdn.co/image/ac2a4bc3b4e1a4aa43b311ca222fdb669bb3f8ba" alt="">
-            </div>
+        <div class="img">
+          <img
+            src="https://i.scdn.co/image/ac2a4bc3b4e1a4aa43b311ca222fdb669bb3f8ba"
+            alt=""
+          />
         </div>
-      </section>
-      <!--Contact Form End -->
+      </div>
+    </section>
+    <!-- Contact Form End -->
 
-      <!-- Footer -->
-       <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>Contact Us</h3>
-                <p>Email:Infoevent@gmail.com</p>
-                <p>Phone:+91 87695 87695</p>
-                <p>Address:Ranjit Avenue B-block,Amritsar</p>
-            </div>
-            <div class="footer-content">
-                <h3>Quick Links</h3>
-                <ul class="list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services </a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-content">
-                <h3>Follow Us</h3>
-                <ul class="social-icons">
-                <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email:Infoevent@gmail.com</p>
+          <p>Phone:+91 87695 87695</p>
+          <p>Address:Ranjit Avenue B-block,Amritsar</p>
         </div>
-        <div class="bottom-bar">
-            <p>$Event Management </p>
+        <div class="footer-content">
+          <h3>Quick Links</h3>
+          <ul class="list">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services </a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
         </div>
+        <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>$Event Management</p>
+      </div>
+    </footer>
+    <!-- Footer -->
 
-       </footer>
-       <!-- Footer -->
-
-     <!-- Swiper Js -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper Js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- Script for js -->
     <script>
-        let MenuBtn = document.querySelector("#MenuBtn")
-        let Navbar = document.querySelector(".header .navbar")
+      let MenuBtn = document.querySelector("#MenuBtn");
+      let Navbar = document.querySelector(".header .navbar");
 
-        window.onscroll = () => {
-            Navbar.classList.remove("active");
-            MenuBtn.classList.remove("fa-times");
-        }
-        MenuBtn.onclick = () => {
-            MenuBtn.classList.toggle("fa-times");
-            Navbar.classList.toggle("active");
-        }
+      window.onscroll = () => {
+        Navbar.classList.remove("active");
+        MenuBtn.classList.remove("fa-times");
+      };
+      MenuBtn.onclick = () => {
+        MenuBtn.classList.toggle("fa-times");
+        Navbar.classList.toggle("active");
+      };
 
-        //Swiper.js
-        var swiper = new Swiper(".ReviewSlider",{
-            slidePerView: 1,
-            grabCursor: true,
-            loop: true,
-            spaceBetween: 10,
-            breakpoints: {
-                0: {
-                    slidesperView: 1,
-                },
-                700: {
-                    slidesPerView: 2,
-                },
-                1050: {
-                    slidesPerView: 3,
-                },
+      //Swiper.js
+      var swiper = new Swiper(".ReviewSlider", {
+        slidePerView: 1,
+        grabCursor: true,
+        loop: true,
+        spaceBetween: 10,
+        breakpoints: {
+          0: {
+            slidesperView: 1,
+          },
+          700: {
+            slidesPerView: 2,
+          },
+          1050: {
+            slidesPerView: 3,
+          },
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+
+      // Theme Toggle
+      let themeToggle = document.querySelector(".themeToggle");
+      let toggleBtn = document.querySelector("#MenuBtn");
+
+      toggleBtn.onclick = () => {
+        themeToggle.classList.toggle("active");
+      };
+
+      // Main Logic
+      document.querySelectorAll(".themeToggle .theme-Btn").forEach((btn) => {
+        btn.onclick = () => {
+          let color = btn.style.background;
+          document.querySelector(":root").style.setProperty("--main", color);
+        };
+      });
+
+      document.getElementById("appointment-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          fetch("{% url 'book_appointment' %}", {
+            method: "POST",
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+              "X-CSRFToken": form.querySelector("[name=csrfmiddlewaretoken]")
+                .value,
             },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                document.getElementById("success-msg").style.display = "block";
+                form.reset();
+              } else {
+                alert("Something went wrong!");
+              }
+            });
         });
-        
-        // Theme Toggle
-        let themeToggle = document.querySelector(".themeToggle")
-        let toggleBtn = document.querySelector("#MenuBtn")
-
-        toggleBtn.onclick = () => {
-            themeToggle.classList.toggle("active");
-         }
-
-         // Main Logic
-         document.querySelectorAll(".themeToggle .theme-Btn").forEach((btn) => {
-            btn.onclick = () => {
-                let color = btn.style.background;
-                document.querySelector(":root").style.setProperty("--main",color)
-            }
-         })
     </script>
-</body>
-
+  </body>
 </html>

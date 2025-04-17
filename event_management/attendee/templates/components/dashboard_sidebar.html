@@ -1,0 +1,32 @@
+<div class="sidebar">
+    <ul>
+      <li>
+        <a href="{% url "hostDashboard" %}">
+          <i class="fas fa-th-large"></i>
+          <div>Dashboard</div>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url "dashboard_events" %}">
+          <i class="fas fa-user-graduate"></i>
+          <div>Events</div>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'view_tickets' %}">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <div>Your Tickets</div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="{% url "settings" %}">
+          <i class="fas fa-cog"></i>
+          <div>Settings</div>
+        </a>
+      </li>
+    </ul>
+  </div>
