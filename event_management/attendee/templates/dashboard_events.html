@@ -17,68 +17,69 @@
   <div class="container">
     {% include "components/dashboard_topbar.html" %}
     {% include "components/dashboard_sidebar.html" %}
+
     
+
     <div class="main">
       {% for event in events %}
+  <div class="item-container">
+    <div class="img-container">
+      <img src="{{ event.url }}" alt="Event image">
+    </div>
+    <div class="body-container">
+      <div class="overlay"></div>
 
-      <div class="item-container">
-        <div class="item-container">
-          <div class="img-container">
-            <img src="{{ event.url }}" alt="Event image">
-          </div>
-          <div class="body-container">
-            <div class="overlay"></div>
+      <div class="event-info">
+        <p class="title">
+          <a href="{% url 'event_detail' event.id %}">{{ event.name }}</a>
+        </p>
+        <div class="seprator"></div>
+        <p class="info">{{ event.info }}</p>
+        <p class="price">Rs.{{ event.grade1_price }}</p>
 
-            <div class="event-info">
-              <p class="title">
-                <a href="{% url 'event_detail' event.id %}">{{ event.name }}</a>
+        <div class="additional-info">
+          <p class="info">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ event.venue }}
+          </p>
+          <p class="info">
+            <i class="fas fa-calendar"></i>
+            {{ event.date }}
+          </p>
+
+          <p class="info-description">
+            {{ event.description }} <span> more..... </span>
+          </p>
+
+          {% if event.already_booked %}
+            <div class="booking-info" style="margin-top: 10px;">
+              <p><strong>Ticket ID:</strong> {{ event.ticket_id }}</p>
+              <p><strong>Ticket Type:</strong>
+                {% if event.ticket_type == 'G1' %}
+                  Grade 1
+                {% elif event.ticket_type == 'G2' %}
+                  Grade 2
+                {% elif event.ticket_type == 'G3' %}
+                  Grade 3
+                {% else %}
+                  Unknown
+                {% endif %}
               </p>
-              <div class="seprator"></div>
-              <p class="info">{{ event.info }}</p>
-              <p class="price">Rs.{{ event.grade1_price }}</p>
-
-              <div class="additional-info">
-                <p class="info">
-                  <i class="fas fa-map-marker-alt"></i>
-                  {{ event.venue }}
-                </p>
-                <p class="info">
-                  <i class="fas fa-calendar"></i>
-                  {{ event.date }}
-                </p>
-
-              <p class="info-description">
-                {{ event.description }} <span> more..... </span>
-              </p>
-
-              {% if event.already_booked %}
-                <div class="booking-info" style="margin-top: 10px;">
-                  <p><strong>Ticket ID:</strong> {{ event.ticket_id }}</p>
-                  <p><strong>Ticket Type:</strong>
-                      {% if event.ticket_type == 'G1' %}
-                        Grade 1
-                      {% elif event.ticket_type == 'G2' %}
-                        Grade 2
-                      {% elif event.ticket_type == 'G3' %}
-                        Grade 3
-                      {% else %}
-                        Unknown
-                      {% endif %}
-                  </p>
-                </div>
-              {% endif %}
             </div>
-          </div>
-          <button class="action">
-            <a href="{% url 'event_detail' event.id %}">
-              {% if event.already_booked %}View
-              {% else %}Book Now
-              {% endif %}
-            </a>
-          </button>
+          {% endif %}
         </div>
       </div>
-      {% endfor %}
+
+      <button class="action">
+        <a href="{% url 'event_detail' event.id %}">
+          {% if event.already_booked %}View
+          {% else %}Book Now
+          {% endif %}
+        </a>
+      </button>
+    </div>
+  </div>
+{% endfor %}
 
     </div>
 

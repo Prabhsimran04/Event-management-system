@@ -373,22 +373,22 @@
                 </ul>
                 <hr>
                 <div class="text-center">
-                 
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access"
-                  {% if already_booked  %}
-                  disabled
-                  {% elif event_date_passed %}
-                  disabled
-                  {% endif %}
-                  >{% if booked_grade == 1 %}Already Booked{% else %}Buy Now{% endif %}</button>
+                  
+                    <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access"
+                    {% if already_booked  %}
+                    disabled
+                    {% elif event_date_passed %}
+                    disabled
+                    {% endif %}
+                    >{% if booked_grade == 1 %}Already Booked{% else %}Buy Now{% endif %}</button>
 
-                  {% if already_booked and booked_grade == 1 %}
-                  <div class="text-center mt-2">
-                    <button class="btn btn-danger cancel-booking-btn" data-event-id="{{ event.id }}">
-                      Cancel Booking
-                    </button>
-                  </div>
-                  {% endif %}
+                    {% if already_booked and booked_grade == 1 %}
+                    <div class="text-center mt-2">
+                      <button class="btn btn-danger cancel-booking-btn" data-event-id="{{ event.id }}">
+                        Cancel Booking
+                      </button>
+                    </div>
+                    {% endif %}
                 </div>
               </div>
             </div>
@@ -479,7 +479,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form method="POST" action="#">
+              <form method="POST" action="#" id="ticket-form" >
                 {% csrf_token %}
                 
                 <!-- Hidden input for event ID -->
@@ -588,7 +588,6 @@
   <script>
     eventId = "{{ event.id }}"
   </script>
-
 
     <!-- JavaScript Libraries -->
   <script src="{% static 'attendee/lib/jquery/jquery.min.js'%}"></script>

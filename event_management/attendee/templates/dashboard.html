@@ -15,8 +15,8 @@
 <body>
     <div class="container">
         {% include "components/dashboard_topbar.html" %}
-        {% include "components/dashboard_sidebar.html" %}
-              
+    {% include "components/dashboard_sidebar.html" %}
+        
         <div class="main">
             <div class="cards">
                 <div class="card">
@@ -31,8 +31,8 @@
 
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">600</div>
-                        <div class="card-name">Attendees</div>
+                        <div class="number">{{ connections }}</div>
+                        <div class="card-name">Connections</div>
                     </div>
                     <div class="icon-box">
                         <i class="fas fa-chalkboard-teacher"></i>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-
+    {% comment %} {{ pie_chart_labels|json_script:"pie-labels" }} {% endcomment %}
     {{ pie_chart_data|json_script:"pie-data" }}
     <script> 
         const booking_data = {{ monthly_bookings.data }}

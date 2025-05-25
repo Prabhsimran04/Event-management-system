@@ -41,3 +41,27 @@ class Appointment(models.Model):
 
     def __str__(self):
         return f"Appointment for {self.name} on {self.date}"
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Name")
+    email = models.EmailField(verbose_name="Email")
+    subject = models.CharField(max_length=200, verbose_name="Subject")
+    message = models.TextField(verbose_name="Message")
+    sent_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.subject}"
+    
+class TicketBooking(models.Model):
+    TICKET_TYPE_CHOICES = [
+        ('G1', 'Grade 1'),
+        ('G2', 'Grade 2'),
+        ('G3', 'Grade 3'),
+    ]
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    event = models.ForeignKey('Event', on_delete=models.CASCADE)
+    booked_on = models.DateTimeField(auto_now_add=True)
+    ticket_type = models.CharField(max_length=10, choices=TICKET_TYPE_CHOICES)
+
+    def __str__(self):
+        return f"Ticket for {self.event.name} by {self.user.username}"

@@ -12,30 +12,7 @@
   <title>Events</title>
 </head>
 <body>
- <!-- Header/Navbar Start-->
- <div class="header">
-  <a href="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" class="logo">
-      <img src="https://th.bing.com/th/id/OIP.kKfVTjELaHK6NEN8qlVYtAHaHa?rs=1&pid=ImgDetMain" alt="">
-  </a>
-
-  <nav class="navbar">
-      <a href="#Home">Home</a>
-      <a href="#About">About</a>
-      <a href="#Services">Services</a>
-      <a href="#Gallery">Gallery</a>
-      <a href="#Review">Review</a>
-      <a href="#Contact">Contact</a>
-      <a href="register">Register</a>
-      <a href="event">Event</a>
-      <a href="hostevent">HostEvent</a>
-      <a href="dashboard">Dashboard</a>
-      <a href="viewattendees">Viewattendees</a>
-      <a href="dashboard_events">Dashboard_Events</a>
-      <a href="dashboard_user">Dashboard_user</a>
-  </nav>
-  <div class="fas fa-bars" id="MenuBtn"></div>
-</div>
-<!-- Header/Navbar End-->
+  {% include "components/main_navbar.html" %}
   <div class="container">
     {% for event in events %}
     

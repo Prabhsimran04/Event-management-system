@@ -25,10 +25,10 @@ var ctx = document.getElementById('doughnut').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Event1', 'Event2', 'Event3', 'Event4'],
+        labels: chartData.labels,
         datasets: [{
             label: 'Attendees',
-            data: [42,12,8,6],
+            data: chartData.data,
             backgroundColor: [
                 'rgba(41,155,99,1)',
                 'rgba(54, 162, 235, 1)',
