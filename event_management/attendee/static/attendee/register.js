@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 alert('Registration successful! You can now log in.');
-                window.location.replace('/event');
+                // window.location.replace('/event');
+                window.location.reload()
                 // Optionally redirect to login page or clear the form
             } else {
                 alert('Registration failed: ' + data.message);
